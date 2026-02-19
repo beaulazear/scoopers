@@ -71,34 +71,16 @@ export default function About() {
             I'm also a software developer. Built apps for my business and co-founded Voxxy. But this one's different — it's about solving a real problem I see every single day.
           </p>
 
-          <div style={{
-            background: 'var(--green)',
-            padding: '2.5rem',
-            borderRadius: '12px',
-            marginBottom: '2.5rem',
-            border: '3px solid var(--dark)',
-          }}>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: '700', marginBottom: '1rem', color: 'var(--dark)' }}>
-              @beaus.animal.care
-            </h3>
-            <div style={{
-              maxWidth: '100%',
-              margin: '0 auto',
-              background: 'white',
-              borderRadius: '8px',
-              overflow: 'hidden',
-              border: '2px solid var(--dark)',
-            }}>
-              <iframe
-                src="https://www.instagram.com/beaus.animal.care/embed"
-                width="100%"
-                height="600"
-                frameBorder="0"
-                scrolling="no"
-                allowTransparency="true"
-                style={{ border: 'none', overflow: 'hidden' }}
-              />
-            </div>
+          <div style={{ marginBottom: '2.5rem' }}>
+            <iframe
+              src="https://www.instagram.com/beaus.animal.care/embed"
+              width="100%"
+              height="600"
+              frameBorder="0"
+              scrolling="no"
+              allowTransparency="true"
+              style={{ border: 'none', overflow: 'hidden' }}
+            />
           </div>
 
           <div style={{
@@ -106,7 +88,7 @@ export default function About() {
             borderTop: '2px solid #ddd',
           }}>
             <p style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>
-              Questions? Email <a href="mailto:hello@scoopers.app" style={{ color: 'var(--green)', fontWeight: '700' }}>hello@scoopers.app</a>
+              Questions? Email <a href="mailto:beaulazear@gmail.com" style={{ color: 'var(--green)', fontWeight: '700' }}>beaulazear@gmail.com</a>
             </p>
             <p style={{ fontSize: '1rem' }}>
               <a href="https://beaulazear.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--green)', fontWeight: '700' }}>beaulazear.com</a>

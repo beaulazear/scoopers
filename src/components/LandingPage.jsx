@@ -1,16 +1,45 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+
 export default function LandingPage() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: Connect to email service
-    console.log('Email submitted:', email)
-    setSubmitted(true)
-    setEmail('')
+    setError('')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch(`${API_URL}/waitlist_signups`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          waitlist_signup: {
+            email: email
+          }
+        })
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitted(true)
+        setEmail('')
+      } else {
+        setError(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch (err) {
+      setError('Failed to connect. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -24,33 +53,59 @@ export default function LandingPage() {
           <p className="hero-subtitle">
             Clean blocks. Happy neighbors. Paid walkers.
           </p>
+          <div className="ios-badge">
+            <div className="ios-badge-inner">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="ios-icon">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+              </svg>
+              <span className="ios-badge-text">
+                <span className="ios-badge-coming">COMING SOON</span>
+                <span className="ios-badge-platform">iOS App Store</span>
+              </span>
+            </div>
+          </div>
           <p className="hero-description">
             Post a cleanup job for your block. A nearby scooper comes and cleans it. Dog waste, litter, trash — gone.
           </p>
 
           {!submitted ? (
-            <form className="email-form" onSubmit={handleSubmit}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="email-input"
-              />
-              <button type="submit" className="cta-button">
-                Join Waitlist
-              </button>
-            </form>
+            <>
+              <form className="email-form" onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                    setError('')
+                  }}
+                  required
+                  disabled={isSubmitting}
+                  className="email-input"
+                />
+                <button type="submit" className="cta-button" disabled={isSubmitting}>
+                  {isSubmitting ? 'Joining...' : 'Join Waitlist'}
+                </button>
+              </form>
+              {error && (
+                <p style={{ color: 'var(--orange)', fontWeight: '700', marginTop: '1rem' }}>
+                  {error}
+                </p>
+              )}
+              <p className="hero-note" style={{ marginTop: error ? '0.5rem' : '1.5rem' }}>
+                Launching in NYC this spring. Coming soon on iOS.
+              </p>
+            </>
           ) : (
-            <div className="success-message">
-              ✓ You're on the list! We'll email you when we launch.
-            </div>
+            <>
+              <div className="success-message">
+                ✓ You're on the list! We'll email you when we launch.
+              </div>
+              <p className="hero-note">
+                Launching in NYC this spring. Coming soon on iOS.
+              </p>
+            </>
           )}
-
-          <p className="hero-note">
-            Launching in NYC this spring. Be first to get a clean block.
-          </p>
         </div>
       </section>
 
@@ -154,19 +209,30 @@ export default function LandingPage() {
           <h2 className="final-cta-title">Your block won't clean itself.</h2>
 
           {!submitted ? (
-            <form className="email-form" onSubmit={handleSubmit}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="email-input"
-              />
-              <button type="submit" className="cta-button">
-                Join Waitlist
-              </button>
-            </form>
+            <>
+              <form className="email-form" onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                    setError('')
+                  }}
+                  required
+                  disabled={isSubmitting}
+                  className="email-input"
+                />
+                <button type="submit" className="cta-button" disabled={isSubmitting}>
+                  {isSubmitting ? 'Joining...' : 'Join Waitlist'}
+                </button>
+              </form>
+              {error && (
+                <p style={{ color: 'var(--orange)', fontWeight: '700', marginTop: '1rem' }}>
+                  {error}
+                </p>
+              )}
+            </>
           ) : (
             <div className="success-message">
               ✓ You're on the list! We'll email you when we launch.
@@ -178,7 +244,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p className="footer-tagline">Made with 💩 in NYC</p>
+          <p className="footer-tagline">Made with 💚 in NYC</p>
           <div className="footer-links">
             <Link to="/about">About</Link>
             <Link to="/privacy">Privacy</Link>

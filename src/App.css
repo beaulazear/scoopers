@@ -67,6 +67,11 @@
   transform: translateY(-2px);
 }
 
+.email-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .cta-button {
   padding: 18px 32px;
   font-size: 1.1rem;
@@ -78,10 +83,15 @@
   transition: all 0.2s;
 }
 
-.cta-button:hover {
+.cta-button:hover:not(:disabled) {
   background: var(--orange);
   border-color: var(--orange);
   transform: translateY(-2px);
+}
+
+.cta-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .success-message {
@@ -98,6 +108,57 @@
 .hero-note {
   font-size: 0.95rem;
   opacity: 0.9;
+}
+
+/* iOS Badge */
+.ios-badge {
+  display: inline-block;
+  margin: 2rem auto 2.5rem;
+}
+
+.ios-badge-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--dark);
+  padding: 14px 24px;
+  border-radius: 50px;
+  border: 2px solid var(--off-white);
+  transition: all 0.2s ease;
+}
+
+.ios-badge-inner:hover {
+  border-color: var(--green);
+}
+
+.ios-icon {
+  color: var(--off-white);
+  transition: color 0.2s ease;
+}
+
+.ios-badge-inner:hover .ios-icon {
+  color: var(--green);
+}
+
+.ios-badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ios-badge-coming {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+.ios-badge-platform {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--off-white);
+  letter-spacing: -0.01em;
 }
 
 /* The Problem */

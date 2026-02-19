@@ -156,7 +156,7 @@ export default function Privacy() {
             <li>Delete your account (this deletes all your data)</li>
             <li>Opt out of marketing emails (but you'll still get important account notifications)</li>
           </UL>
-          <P>To exercise these rights, email us at <a href="mailto:privacy@scoopers.app" style={{ color: 'var(--green)', fontWeight: '600' }}>privacy@scoopers.app</a></P>
+          <P>To exercise these rights, email us at <a href="mailto:beaulazear@gmail.com" style={{ color: 'var(--green)', fontWeight: '600' }}>beaulazear@gmail.com</a></P>
         </Section>
 
         <Section>
@@ -176,7 +176,7 @@ export default function Privacy() {
 
         <Section>
           <H2>9. Contact Us</H2>
-          <P>Questions about privacy? Email <a href="mailto:privacy@scoopers.app" style={{ color: 'var(--green)', fontWeight: '600' }}>privacy@scoopers.app</a></P>
+          <P>Questions about privacy? Email <a href="mailto:beaulazear@gmail.com" style={{ color: 'var(--green)', fontWeight: '600' }}>beaulazear@gmail.com</a></P>
         </Section>
 
         <Alert>

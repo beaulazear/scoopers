@@ -213,7 +213,7 @@ export default function Terms() {
 
         <Section>
           <H2>9. Contact</H2>
-          <P>Questions? Email us at <a href="mailto:hello@scoopers.app" style={{ color: 'var(--green)', fontWeight: '600' }}>hello@scoopers.app</a></P>
+          <P>Questions? Email us at <a href="mailto:beaulazear@gmail.com" style={{ color: 'var(--green)', fontWeight: '600' }}>beaulazear@gmail.com</a></P>
         </Section>
 
         <Alert type="info">
