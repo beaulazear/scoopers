@@ -1,12 +1,14 @@
 {
-  "name": "Scoopers - Clean blocks. Happy neighbors. Paid walkers.",
+  "name": "Scoopers NYC - Job Board for Street Cleanup",
   "short_name": "Scoopers",
-  "description": "Post a cleanup job for your block. A nearby scooper comes and cleans it. Dog waste, litter, trash — gone.",
+  "description": "Real-time job board on a map. Post cleanup jobs ($5-$20) or claim jobs and earn money. GPS tracking, photo verification, instant payment. Two-sided marketplace for cleaner NYC blocks.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#00D084",
   "theme_color": "#00D084",
   "orientation": "portrait-primary",
+  "scope": "/scoopers/",
+  "categories": ["business", "productivity", "utilities"],
   "icons": [
     {
       "src": "/favicon.svg",
