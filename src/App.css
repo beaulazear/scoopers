@@ -1,0 +1,380 @@
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--green);
+  color: var(--dark);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.email-input {
+  padding: 18px 24px;
+  font-size: 1.1rem;
+  border: 3px solid var(--dark);
+  border-radius: 12px;
+  background: var(--off-white);
+  color: var(--dark);
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.cta-button {
+  padding: 18px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--dark);
+  color: var(--off-white);
+  border: 3px solid var(--dark);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.cta-button:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.success-message {
+  padding: 20px;
+  background: var(--dark);
+  color: var(--green);
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-note {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* The Problem */
+.problem {
+  padding: 100px 20px;
+  background: var(--dark);
+  color: var(--off-white);
+  text-align: center;
+}
+
+.problem-title {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: var(--orange);
+}
+
+.problem-text {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  opacity: 0.95;
+}
+
+.problem-text-big {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-top: 2rem;
+  color: var(--green);
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 80px 20px;
+  background: var(--off-white);
+}
+
+.how-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.simple-step {
+  text-align: center;
+  flex: 1;
+}
+
+.simple-step p {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--dark);
+}
+
+.simple-arrow {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--green);
+  transform: rotate(90deg);
+}
+
+.how-note {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Earn Money */
+.earn-money {
+  padding: 100px 20px;
+  background: var(--green);
+  color: var(--dark);
+}
+
+.earn-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.earn-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.earn-description {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.earn-callout {
+  background: var(--dark);
+  color: var(--green);
+  padding: 2rem;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+/* Community */
+.community {
+  padding: 100px 20px;
+  background: var(--off-white);
+  text-align: center;
+}
+
+.community-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.community-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.community-text {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.7;
+  color: #555;
+}
+
+/* FAQ */
+.faq {
+  padding: 80px 20px;
+  background: var(--dark);
+}
+
+.faq-grid-new {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-large {
+  background: var(--green);
+  color: var(--dark);
+  padding: 3rem;
+  border-radius: 16px;
+  grid-column: 1;
+}
+
+.faq-q-large {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.faq-a-large {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.faq-small {
+  background: var(--off-white);
+  color: var(--dark);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.faq-q-small {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.faq-a-small {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.faq-disclaimer {
+  background: var(--orange);
+  color: var(--dark);
+}
+
+.faq-disclaimer .faq-a-small {
+  color: var(--dark);
+}
+
+/* Final CTA */
+.final-cta {
+  padding: 100px 20px;
+  background: var(--green);
+  text-align: center;
+}
+
+.final-cta-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  line-height: 1.1;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  background: var(--dark);
+  color: var(--off-white);
+  text-align: center;
+}
+
+.footer-tagline {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--green);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .email-form {
+    flex-direction: row;
+  }
+
+  .email-input {
+    flex: 1;
+  }
+
+  .cta-button {
+    flex-shrink: 0;
+  }
+
+  .how-simple {
+    flex-direction: row;
+  }
+
+  .simple-arrow {
+    transform: rotate(0deg);
+  }
+
+  .faq-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faq-large {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
