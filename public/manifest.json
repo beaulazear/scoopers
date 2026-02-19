@@ -1,0 +1,18 @@
+{
+  "name": "Scoopers - Clean blocks. Happy neighbors. Paid walkers.",
+  "short_name": "Scoopers",
+  "description": "Post a cleanup job for your block. A nearby scooper comes and cleans it. Dog waste, litter, trash — gone.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00D084",
+  "theme_color": "#00D084",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
