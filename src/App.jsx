@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/scoopers">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/terms" element={<Terms />} />
