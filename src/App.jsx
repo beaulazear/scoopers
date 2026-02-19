@@ -3,6 +3,7 @@ import LandingPage from './components/LandingPage'
 import Terms from './components/Terms'
 import Privacy from './components/Privacy'
 import About from './components/About'
+import PoopStreats from './components/PoopStreats'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/about" element={<About />} />
+        <Route path="/poopstreats" element={<PoopStreats />} />
       </Routes>
     </BrowserRouter>
   )
