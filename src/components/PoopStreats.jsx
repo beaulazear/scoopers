@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const API_URL = import.meta.env.VITE_API_URL || 'https://dog-walking-app.onrender.com'
+import { login, authApiCall, logout, isAuthenticated } from '../utils/api'
 
 export default function PoopStreats() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [token, setToken] = useState(localStorage.getItem('admin_token'))
+  const [token, setToken] = useState(localStorage.getItem('token'))
   const [error, setError] = useState('')
   const [waitlist, setWaitlist] = useState([])
   const [loading, setLoading] = useState(false)
@@ -24,29 +23,17 @@ export default function PoopStreats() {
     setLoading(true)
 
     try {
-      const response = await fetch(`${API_URL}/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password })
-      })
+      const data = await login(username, password)
 
-      const data = await response.json()
-
-      if (response.ok) {
-        if (data.user.admin) {
-          localStorage.setItem('admin_token', data.token)
-          setToken(data.token)
-          setError('')
-        } else {
-          setError('Admin access required')
-        }
+      if (data.user && data.user.admin) {
+        setToken(data.token)
+        setError('')
       } else {
-        setError(data.error || 'Invalid credentials')
+        logout() // Clear token if not admin
+        setError('Admin access required')
       }
     } catch (err) {
-      setError('Failed to connect')
+      setError(err.message || 'Failed to connect')
     } finally {
       setLoading(false)
     }
@@ -55,30 +42,22 @@ export default function PoopStreats() {
   const fetchWaitlist = async () => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_URL}/waitlist_signups`, {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        }
-      })
-
-      if (response.ok) {
-        const data = await response.json()
-        setWaitlist(data)
-      } else if (response.status === 403 || response.status === 401) {
-        setError('Admin access required')
+      const data = await authApiCall('/waitlist_signups')
+      setWaitlist(data)
+    } catch (err) {
+      if (err.message.includes('401') || err.message.includes('403') || err.message.includes('No authentication token')) {
+        setError('Session expired - please log in again')
         handleLogout()
       } else {
-        setError('Failed to fetch waitlist')
+        setError(err.message || 'Failed to fetch waitlist')
       }
-    } catch (err) {
-      setError('Failed to connect')
     } finally {
       setLoading(false)
     }
   }
 
   const handleLogout = () => {
-    localStorage.removeItem('admin_token')
+    logout()
     setToken(null)
     setWaitlist([])
     setUsername('')
