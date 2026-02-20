@@ -38,12 +38,21 @@ export default function LandingPage() {
     // Phase 2: Fade out problem (3s total)
     timers.push(setTimeout(() => setIntroPhase(2), 3000))
 
-    // Phase 3: End intro, show main content (4s total)
+    // Phase 3: Show Beau photo AND greeting together (3.5s total)
+    timers.push(setTimeout(() => setIntroPhase(3), 3500))
+
+    // Phase 4: Show story text (5s total)
+    timers.push(setTimeout(() => setIntroPhase(4), 5000))
+
+    // Phase 5: Fade out Beau slide (8s total)
+    timers.push(setTimeout(() => setIntroPhase(5), 8000))
+
+    // Phase 6: End intro, show main content (9s total)
     timers.push(setTimeout(() => {
       setShowIntro(false)
       setShowMainContent(true)
       sessionStorage.setItem('hasSeenIntro', 'true')
-    }, 4000))
+    }, 9000))
 
     return () => timers.forEach(timer => clearTimeout(timer))
   }, [triggerIntro])
@@ -86,10 +95,28 @@ export default function LandingPage() {
     return (
       <div className="intro-overlay">
         <div className="intro-content">
-          {introPhase >= 1 && (
+          {introPhase >= 1 && introPhase < 2 && (
             <h1 className={`intro-line intro-line-1 ${introPhase >= 1 ? 'fade-in' : ''} ${introPhase >= 2 ? 'fade-out' : ''}`}>
               Tired of stepping in dog sh*t?
             </h1>
+          )}
+          {introPhase >= 3 && (
+            <div className={`intro-beau-slide ${introPhase >= 5 ? 'fade-out' : ''}`}>
+              <img
+                src="/beau-walking.png"
+                alt="Beau walking dogs in Brooklyn"
+                className={`intro-beau-photo ${introPhase >= 3 ? 'fade-in' : ''}`}
+                loading="eager"
+              />
+              <div className="intro-beau-text-container">
+                <p className={`intro-beau-greeting ${introPhase >= 3 ? 'fade-in' : ''}`}>
+                  So was Beau.
+                </p>
+                <p className={`intro-beau-story ${introPhase >= 4 ? 'fade-in' : ''}`}>
+                  A dog walker always cleaning up after himself, yet still stepping in sh*t.
+                </p>
+              </div>
+            </div>
           )}
         </div>
         <button
@@ -159,7 +186,7 @@ export default function LandingPage() {
           </button>
 
           <p className="hero-description">
-            NYC street cleanup solution. Post dog waste or litter cleanup jobs on your block or near your business. Nearby scoopers claim jobs, clean, and get paid. Real-time GPS tracking. Photo-verified results. Instant payment.
+            Post cleanup jobs for your block. Or claim jobs and earn money.
           </p>
 
           {!submitted ? (
@@ -187,7 +214,7 @@ export default function LandingPage() {
                 </p>
               )}
               <p className="hero-note" style={{ marginTop: error ? '0.5rem' : '1.5rem' }}>
-                Launching Spring 2026 in NYC (all 5 boroughs). iOS app with live map, real-time tracking, photo verification.
+                Launching Spring 2026 in NYC (all 5 boroughs).
               </p>
             </>
           ) : (
@@ -196,7 +223,7 @@ export default function LandingPage() {
                 ✓ You're on the list! We'll email you when we launch.
               </div>
               <p className="hero-note">
-                Launching Spring 2026 in NYC (all 5 boroughs). iOS app with live map, real-time tracking, photo verification.
+                Launching Spring 2026 in NYC (all 5 boroughs).
               </p>
             </>
           )}

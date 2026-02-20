@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Green background -->
+  <rect width="1200" height="630" fill="#00D084"/>
+
+  <!-- Main message -->
+  <text
+    x="600"
+    y="230"
+    font-family="Inter, Arial, sans-serif"
+    font-size="85"
+    font-weight="900"
+    fill="#1A1A1A"
+    text-anchor="middle"
+    letter-spacing="-1">
+    Earn money
+  </text>
+
+  <text
+    x="600"
+    y="330"
+    font-family="Inter, Arial, sans-serif"
+    font-size="85"
+    font-weight="900"
+    fill="#1A1A1A"
+    text-anchor="middle"
+    letter-spacing="-1">
+    cleaning blocks
+  </text>
+
+  <!-- Subtext -->
+  <text
+    x="600"
+    y="450"
+    font-family="Inter, Arial, sans-serif"
+    font-size="48"
+    font-weight="700"
+    fill="#1A1A1A"
+    text-anchor="middle">
+    $5-$20 per job
+  </text>
+
+  <text
+    x="600"
+    y="510"
+    font-family="Inter, Arial, sans-serif"
+    font-size="36"
+    font-weight="600"
+    fill="#1A1A1A"
+    text-anchor="middle"
+    opacity="0.85">
+    Get paid instantly • 60 min guarantee
+  </text>
+
+  <!-- QR Code with white background -->
+  <rect x="1020" y="450" width="160" height="160" fill="white" rx="8"/>
+  <image
+    x="1030"
+    y="460"
+    width="140"
+    height="140"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQMAAABB54RGAAAABlBMVEUAAAD///+l2Z/dAAAAAnRSTlP//8i138cAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAFOSURBVGiB7djLrcQgDAVQSykgJaV1SqIAJE/wB8h7Gk123MVlkYFwZmVhHIu+HkJKSkpKSopBJcahcmnzmWrN1xcpFPVFvUHpqpy5XHZJYWgP4mV79yPC6bODFJj2pWRgSbFpOdt4RwpKNSIZ4XyVX0k30aUgqfPxq3Yh3ULnMHBXJQMsW6QY9D53LZOmqYxu/J0UiVqJb19lVufnrPkpfASWdDvN4qO/nsfQZue/25B0NxWJynHxatG1P5GCUckv54zk1/xKup326r74o0l0E0f6VFI4GifQhmfO0a4ihaLWpL9yloFtkpUKKRSt42LzzBmXXWyQItE5PIgjnKSANKKYNWTQOjwpFPWFN4AjX645lBSLVnkU+396v6Sg9HnZqWalQgpIl95HyQ8AUjRqP95XjMwZMa2kcDTGLBqPpRVCikVfDVJSUlJS0u30A5qKTxRKu7hXAAAAAElFTkSuQmCC"/>
+
+  <!-- Scan text -->
+  <text
+    x="1100"
+    y="625"
+    font-family="Inter, Arial, sans-serif"
+    font-size="14"
+    font-weight="600"
+    fill="#1A1A1A"
+    text-anchor="middle">
+    SCAN ME
+  </text>
+</svg>

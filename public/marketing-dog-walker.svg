@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Dark background -->
+  <rect width="1200" height="630" fill="#1A1A1A"/>
+
+  <!-- Main message -->
+  <text
+    x="600"
+    y="240"
+    font-family="Inter, Arial, sans-serif"
+    font-size="90"
+    font-weight="900"
+    fill="#00D084"
+    text-anchor="middle"
+    letter-spacing="-1">
+    Built by a
+  </text>
+
+  <text
+    x="600"
+    y="350"
+    font-family="Inter, Arial, sans-serif"
+    font-size="110"
+    font-weight="900"
+    fill="#00D084"
+    text-anchor="middle"
+    letter-spacing="-2">
+    dog walker
+  </text>
+
+  <!-- Bottom text -->
+  <text
+    x="600"
+    y="460"
+    font-family="Inter, Arial, sans-serif"
+    font-size="38"
+    font-weight="700"
+    fill="#F7F7F5"
+    text-anchor="middle">
+    who walks 50+ dogs a week in Brooklyn
+  </text>
+
+  <!-- Website URL -->
+  <text
+    x="600"
+    y="580"
+    font-family="Inter, Arial, sans-serif"
+    font-size="28"
+    font-weight="600"
+    fill="#00D084"
+    text-anchor="middle"
+    opacity="0.9">
+    www.scoopersnyc.com
+  </text>
+</svg>
