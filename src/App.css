@@ -745,6 +745,14 @@
   color: var(--green);
 }
 
+.footer-copyright {
+  font-size: 0.85rem;
+  color: var(--off-white);
+  opacity: 0.6;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .email-form {

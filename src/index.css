@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'Lowraw';
+  src: url('/fonts/Lowraw.ttf') format('truetype'),
+       url('/fonts/Lowraw.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* Brand Colors */
@@ -7,7 +14,7 @@
   --dark: #1A1A1A;
   --orange: #FF6B35;
 
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Lowraw', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

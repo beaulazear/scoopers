@@ -367,12 +367,13 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p className="footer-tagline">Made with 💚 in NYC</p>
+          <p className="footer-tagline">Made with 💩 in NYC</p>
           <div className="footer-links">
             <Link to="/about">About</Link>
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
           </div>
+          <p className="footer-copyright">© 2026 Scoopers LLC. All rights reserved.</p>
         </div>
       </footer>
     </div>
