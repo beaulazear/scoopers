@@ -7,12 +7,12 @@
 
   <!-- Home Page / Landing Page -->
   <url>
-    <loc>https://beaulazear.github.io/scoopers/</loc>
+    <loc>https://scoopersnyc.com/</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://beaulazear.github.io/scoopers/social-share.png</image:loc>
+      <image:loc>https://scoopersnyc.com/social-share.png</image:loc>
       <image:title>Scoopers NYC - Dog Waste Cleanup Service</image:title>
       <image:caption>NYC's premier dog waste cleanup and street cleaning marketplace</image:caption>
     </image:image>
@@ -20,7 +20,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://beaulazear.github.io/scoopers/about</loc>
+    <loc>https://scoopersnyc.com/about</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -28,7 +28,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://beaulazear.github.io/scoopers/privacy</loc>
+    <loc>https://scoopersnyc.com/privacy</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -36,7 +36,7 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://beaulazear.github.io/scoopers/terms</loc>
+    <loc>https://scoopersnyc.com/terms</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
