@@ -101,21 +101,16 @@ export default function LandingPage() {
             </h1>
           )}
           {introPhase >= 3 && (
-            <div className={`intro-beau-slide ${introPhase >= 5 ? 'fade-out' : ''}`}>
-              <img
-                src="/beau-walking.png"
-                alt="Beau walking dogs in Brooklyn"
-                className={`intro-beau-photo ${introPhase >= 3 ? 'fade-in' : ''}`}
-                loading="eager"
-              />
-              <div className="intro-beau-text-container">
-                <p className={`intro-beau-greeting ${introPhase >= 3 ? 'fade-in' : ''}`}>
-                  So was Beau.
-                </p>
-                <p className={`intro-beau-story ${introPhase >= 4 ? 'fade-in' : ''}`}>
-                  A dog walker always cleaning up after himself, yet still stepping in sh*t.
-                </p>
-              </div>
+            <div className={`intro-text-slide ${introPhase >= 5 ? 'fade-out' : ''}`}>
+              <p className={`intro-line-hero ${introPhase >= 3 ? 'fade-in' : ''}`}>
+                So was I.
+              </p>
+              <p className={`intro-line-story ${introPhase >= 3 ? 'fade-in' : ''}`}>
+                A Brooklyn dog walker tired of stepping in everyone else's sh*t.
+              </p>
+              <p className={`intro-line-solution ${introPhase >= 4 ? 'fade-in' : ''}`}>
+                Except now there's a solution.
+              </p>
             </div>
           )}
         </div>
@@ -131,13 +126,6 @@ export default function LandingPage() {
         </button>
       </div>
     )
-  }
-
-  const replayIntro = () => {
-    sessionStorage.removeItem('hasSeenIntro')
-    setShowIntro(true)
-    setShowMainContent(false)
-    setTriggerIntro(prev => prev + 1) // This triggers the useEffect to restart the animation
   }
 
   return (
@@ -160,33 +148,11 @@ export default function LandingPage() {
             SCOOPERS
           </h1>
           <p className="hero-subtitle" role="doc-subtitle">
-            Clean blocks. Happy New Yorkers.
+            Clean blocks. Happy neighbors. Easy money.
           </p>
 
-          {/* Testing button - remove before production */}
-          <button
-            onClick={replayIntro}
-            style={{
-              position: 'fixed',
-              bottom: '20px',
-              left: '20px',
-              background: 'var(--orange)',
-              color: 'var(--dark)',
-              border: 'none',
-              padding: '12px 20px',
-              borderRadius: '8px',
-              fontWeight: '700',
-              fontSize: '0.9rem',
-              cursor: 'pointer',
-              zIndex: 1000,
-              boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-            }}
-          >
-            🎬 Replay Intro
-          </button>
-
           <p className="hero-description">
-            Post cleanup jobs for your block. Or claim jobs and earn money.
+            Sponsor your block for weekly cleanups. Or post one-off jobs for those messes you see every day.
           </p>
 
           {!submitted ? (
@@ -220,7 +186,7 @@ export default function LandingPage() {
           ) : (
             <>
               <div className="success-message">
-                ✓ You're on the list! We'll email you when we launch.
+                You're on the list! We'll email you when we launch.
               </div>
               <p className="hero-note">
                 Launching Spring 2026 in NYC (all 5 boroughs).
@@ -235,7 +201,7 @@ export default function LandingPage() {
         <div className="container">
           <h2 id="problem-heading" className="problem-title">Tired of stepping in dog sh*t?</h2>
           <p className="problem-text">
-            Yeah, we all are. Every block has that one spot. You know the one. Everyone walks around it. Nobody does anything about it.
+            Every block has that one spot. Everyone walks around it. Nobody does anything.
           </p>
           <p className="problem-text-big">
             Until now.
@@ -243,10 +209,46 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Block Sponsorship */}
+      <section className="sponsorship" aria-labelledby="sponsorship-heading">
+        <div className="container">
+          <h2 id="sponsorship-heading" className="sponsorship-title">
+            Sponsor your block.
+          </h2>
+          <p className="sponsorship-description">
+            Hire a dog walker to keep your block clean every week. They're already walking it 3x a day. Pay them $40-$60/month to sweep it on a schedule. Your block gets a green badge on the map. Neighbors can chip in.
+          </p>
+          <div className="sponsorship-grid">
+            <div className="sponsorship-benefit">
+              <h3>Weekly maintenance</h3>
+              <p>Professional dog walkers sweep your block weekly or biweekly.</p>
+            </div>
+            <div className="sponsorship-benefit">
+              <h3>Public proof</h3>
+              <p>Your block shows green on the map. Everyone sees it's sponsored.</p>
+            </div>
+            <div className="sponsorship-benefit">
+              <h3>Split the cost</h3>
+              <p>Neighbors contribute $5-$25/month. Your cost drops.</p>
+            </div>
+            <div className="sponsorship-benefit">
+              <h3>Track results</h3>
+              <p>See every pickup. This week, this month, all time.</p>
+            </div>
+          </div>
+          <div className="sponsorship-callout">
+            Pay dog walkers to clean the blocks they already walk. Recurring maintenance beats one-off cleanups.
+          </div>
+        </div>
+      </section>
+
+      {/* One-Off Jobs */}
       <section className="how-it-works" aria-labelledby="how-it-works-heading">
         <div className="container">
-          <h2 id="how-it-works-heading" className="visually-hidden">How Our Dog Waste Cleanup Service Works</h2>
+          <h2 id="how-it-works-heading" className="how-works-title">Or post a one-off job.</h2>
+          <p className="how-works-subtitle">
+            Dog waste, litter, trash piles — those messes you see every day. Set a price. Someone claims it. It's gone.
+          </p>
           <div className="how-simple" role="list">
             <div className="simple-step" role="listitem">
               <p>See a mess</p>
@@ -261,22 +263,19 @@ export default function LandingPage() {
             </div>
           </div>
           <p className="how-note">
-            Dog waste, trash piles, litter — you decide what it's worth. Most jobs are $5-$20. Jobs appear on a live map. Scoopers claim jobs, arrive within 60 minutes, and submit before/after photos for verification.
+            Most jobs are $5-$20. Jobs appear on a live map. Scoopers arrive within 60 minutes and submit before/after photos.
           </p>
         </div>
       </section>
 
-      {/* Earn Money */}
-      <section className="earn-money" aria-labelledby="earn-money-heading">
+      {/* Business Sponsors */}
+      <section className="earn-money" aria-labelledby="business-sponsor-heading">
         <div className="container">
           <div className="earn-content">
-            <h2 id="earn-money-heading" className="earn-title">Dog Walkers NYC: Browse Jobs on the Map, Claim, Clean, Get Paid</h2>
+            <h2 id="business-sponsor-heading" className="earn-title">Business sponsors show up on the map.</h2>
             <p className="earn-description">
-              Open the app. See cleanup jobs on a live map. Claim one, arrive within 60 minutes, take before/after photos, submit. Payment hits your account instantly through Stripe. You're out there 3x a day anyway — earn $15 in 2 minutes.
+              Your neighbors see you're helping keep the neighborhood clean. Public proof you care about the community.
             </p>
-            <div className="earn-callout" role="note">
-              Most jobs pay $5-$20. You bring the bags. We bring the GPS tracking, photo verification, and instant payment.
-            </div>
           </div>
         </div>
       </section>
@@ -285,9 +284,9 @@ export default function LandingPage() {
       <section className="community" aria-labelledby="community-heading">
         <div className="container">
           <div className="community-content">
-            <h2 id="community-heading" className="community-title">Two-Sided Marketplace for Cleaner NYC Blocks</h2>
+            <h2 id="community-heading" className="community-title">Cleaner blocks. Happier neighbors.</h2>
             <p className="community-text">
-              Residents who want clean blocks meet scoopers who want to earn. Every job posted connects neighbors. Every job claimed cleans a street. Do it enough times and people notice. Kids can play. Neighbors actually want to be outside. The app makes it happen.
+              Residents post jobs. Scoopers claim them. Blocks get clean. Do it enough and people notice. Kids play outside. Neighbors talk. The block changes.
             </p>
           </div>
         </div>
@@ -299,8 +298,8 @@ export default function LandingPage() {
           <h2 id="faq-heading" className="visually-hidden">Frequently Asked Questions About Scoopers NYC</h2>
           <div className="faq-grid-new">
             <div className="faq-large">
-              <h3 className="faq-q-large">How does the app work?</h3>
-              <p className="faq-a-large">It's a job board on a map. Posters drop a pin on their block, upload photos, set a price ($5-$20), and post. Jobs appear live on the map. Scoopers browse jobs, claim one, arrive within 60 minutes, clean, submit before/after photos, and get paid instantly through Stripe. GPS-verified. Photo-verified. Simple.</p>
+              <h3 className="faq-q-large">How does it work?</h3>
+              <p className="faq-a-large">Two ways: Sponsor your block for recurring weekly cleanups by dog walkers ($40-$60/month). Your block shows green on the map. Neighbors can chip in. Or post one-off jobs for dog waste, litter, trash ($5-$20). Jobs appear live on the map. Scoopers claim them, clean within 60 minutes, submit photos, get paid instantly through Stripe. GPS-verified. Photo-verified.</p>
             </div>
 
             <div className="faq-small">
@@ -358,7 +357,7 @@ export default function LandingPage() {
             </>
           ) : (
             <div className="success-message">
-              ✓ You're on the list! We'll email you when we launch.
+              You're on the list! We'll email you when we launch.
             </div>
           )}
         </div>
@@ -367,7 +366,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p className="footer-tagline">Made with 💩 in NYC</p>
+          <p className="footer-tagline">Made with 💩 in Brooklyn</p>
           <div className="footer-links">
             <Link to="/about">About</Link>
             <Link to="/privacy">Privacy</Link>

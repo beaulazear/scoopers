@@ -114,7 +114,7 @@ export default function Terms() {
             marginTop: '12px',
             fontWeight: '400',
           }}>
-            Last Updated: February 20, 2026
+            Last Updated: February 21, 2026
           </p>
         </div>
       </div>
@@ -134,8 +134,13 @@ export default function Terms() {
 
         <Section>
           <H2>2. The Service</H2>
-          <P>Scoopers is a job board on a map that connects people who want their street cleaned ("Posters") with people willing to clean it for payment ("Scoopers"). We provide the platform and payment processing. We don't clean anything ourselves, and we don't employ any cleaners.</P>
-          <P>A single user can be both a Poster and a Scooper. You can post jobs for your own block and claim jobs on other blocks.</P>
+          <P>Scoopers is a block sponsorship platform and job board on a map. We connect people who want their blocks cleaned with dog walkers and scoopers who clean them for payment. We offer two types of cleanup services:</P>
+          <UL>
+            <li><strong>Block Sponsorships:</strong> Recurring weekly or biweekly cleanups by dog walkers for a monthly fee ($40-$60/month). Sponsors can be residents, businesses, or organizations. Business sponsors are publicly displayed on the map.</li>
+            <li><strong>One-Off Jobs:</strong> Single cleanup jobs for dog waste, litter, and trash ($5-$20 per job). Anyone can post or claim these jobs.</li>
+          </UL>
+          <P>We provide the platform and payment processing. We don't clean anything ourselves, and we don't employ any cleaners. Dog walkers and scoopers are independent contractors.</P>
+          <P>A single user can be both a Poster/Sponsor and a Scooper. You can sponsor your block or post jobs while also claiming jobs on other blocks.</P>
         </Section>
 
         <Section>
@@ -210,22 +215,66 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>5. Payment & Fees</H2>
-          <P>Posters set the price for each job. Scoopers see the price and their take-home earnings (after platform fee) before accepting.</P>
-          <P><strong>Platform Fee:</strong> Scoopers LLC charges an 18% service fee on each completed job, deducted from the scooper's earnings. Posters pay the full job price they set.</P>
-          <P><strong>Payment Processing:</strong> All payments are processed securely through Stripe. Posters pay with a credit/debit card. Scoopers receive earnings via direct deposit to their bank account or debit card.</P>
-          <P><strong>When Payment Happens:</strong></P>
+          <H2>5. Block Sponsorships (Recurring Cleanups)</H2>
+
+          <H3>What Are Block Sponsorships?</H3>
+          <P>Block sponsorships allow residents, businesses, or organizations to hire dog walkers to maintain their block on a recurring schedule (weekly or biweekly) for a monthly fee (typically $40-$60/month). Sponsorships are for <strong>poop-only cleanup</strong> — dog walkers sweep the block for dog waste during their regular walking routes.</P>
+
+          <H3>How Sponsorships Work</H3>
+          <UL>
+            <li><strong>Sponsors</strong> select their block, choose a schedule (weekly/biweekly), set a monthly budget, and choose their display preference (show first name, business name, or remain anonymous)</li>
+            <li><strong>Dog walkers</strong> claim sponsorships and receive recurring payments to perform maintenance sweeps on their scheduled days</li>
+            <li><strong>Neighbors</strong> can contribute $5-$25/month to support a block sponsorship, reducing the sponsor's cost</li>
+            <li><strong>Public visibility:</strong> Sponsored blocks show green on the public map with the sponsor's chosen display name (or "A neighbor" if anonymous)</li>
+          </UL>
+
+          <H3>Sponsorship Payments</H3>
+          <UL>
+            <li>First month charged immediately (includes initial deep sweep + scheduled maintenance sweeps)</li>
+            <li>Recurring monthly billing until sponsor cancels</li>
+            <li>18% platform fee deducted from dog walker's earnings</li>
+            <li>Monthly ratings allow sponsors to rate their dog walker's service</li>
+          </UL>
+
+          <H3>Cancellation of Sponsorships</H3>
+          <UL>
+            <li>Sponsors can pause, resume, or cancel sponsorships at any time</li>
+            <li>Dog walkers can decline or cancel sponsorship assignments</li>
+            <li>No refunds for partial months — service continues through end of billing period</li>
+          </UL>
+
+          <Alert type="warning">
+            <H3>SPONSORSHIP DISCLAIMER</H3>
+            <P><strong>Block sponsorships are for scheduled maintenance sweeps only. Scoopers LLC does NOT guarantee any specific level of cleanliness, number of pickups, or results.</strong> Dog walkers sweep the block as part of their regular route — actual pickup counts vary based on conditions. <strong>Sponsors, contributors, and dog walkers participate entirely at their own risk.</strong></P>
+            <P style={{ marginBottom: 0 }}><strong>Scoopers LLC is NOT responsible for:</strong> Unsatisfactory cleanliness, disputes between sponsors and dog walkers, neighbor contribution disputes, any injuries or incidents during sponsorship sweeps, or any other issues arising from block sponsorships.</P>
+          </Alert>
+        </Section>
+
+        <Section>
+          <H2>6. Payment & Fees</H2>
+          <P>Posters set the price for each one-off job. Scoopers see the price and their take-home earnings (after platform fee) before accepting.</P>
+          <P><strong>Platform Fee:</strong> Scoopers LLC charges an 18% service fee on all completed jobs and sponsorships, deducted from the scooper/dog walker's earnings. Posters and sponsors pay the full price they set.</P>
+          <P><strong>Payment Processing:</strong> All payments are processed securely through Stripe. Posters and sponsors pay with credit/debit card. Scoopers receive earnings via direct deposit to their bank account or debit card.</P>
+          <P><strong>When Payment Happens (One-Off Jobs):</strong></P>
           <UL>
             <li>When a Poster posts a job, Stripe places a hold on their payment method (not a charge)</li>
             <li>When a Scooper completes a job and the Poster confirms completion, the hold converts to a charge and the Scooper is paid instantly</li>
             <li>If a Poster doesn't confirm within 2 hours, the job auto-confirms and payment releases to the Scooper</li>
-            <li>If a job is cancelled or disputed, payment holds are released or adjusted based on the cancellation policy (see Section 8)</li>
+            <li>If a job is cancelled or disputed, payment holds are released or adjusted based on the cancellation policy (see Section 9)</li>
+          </UL>
+          <P><strong>When Payment Happens (Sponsorships):</strong></P>
+          <UL>
+            <li>First month charged immediately when sponsorship is created</li>
+            <li>Recurring monthly charges on the same day each month until cancelled</li>
+            <li>Dog walkers are paid after each completed sweep</li>
+            <li>Neighbor contributions are charged monthly and applied to reduce sponsor's cost</li>
           </UL>
           <P><strong>Tips:</strong> Posters can tip Scoopers after job completion. Tips go 100% to the Scooper with no platform fee.</P>
+          <P><strong>Payment Disputes:</strong> All payment processing is handled by Stripe. Scoopers LLC does not store credit card information and is not responsible for payment processing errors, chargebacks, or payment disputes. Contact Stripe support for payment issues.</P>
         </Section>
 
         <Section>
-          <H2>6. GPS Tracking & Photo Verification</H2>
+          <H2>7. GPS Tracking & Photo Verification</H2>
           <P>All jobs use GPS tracking and photo verification to ensure trust and accountability:</P>
           <UL>
             <li><strong>Posters</strong> must provide at least 1 photo (max 4) when posting a job. Photos must be recent (within 30 minutes) and geotagged at the job location.</li>
@@ -237,7 +286,7 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>7. User Conduct</H2>
+          <H2>8. User Conduct</H2>
           <P>Don't be a jerk. Specifically:</P>
           <UL>
             <li>Don't post fake jobs or jobs for blocks that don't need cleaning</li>
@@ -252,7 +301,7 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>8. Cancellation Policy</H2>
+          <H2>9. Cancellation Policy</H2>
 
           <H3>Poster Cancellations</H3>
           <UL>
@@ -272,7 +321,7 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>9. Disputes & Resolution</H2>
+          <H2>10. Disputes & Resolution</H2>
           <P>If a Poster or Scooper has an issue with a completed job, they can report it through the app:</P>
           <UL>
             <li><strong>Poster disputes:</strong> "Scooper didn't clean," "Block still dirty," "Photos don't match," or "Other"</li>
@@ -284,7 +333,7 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>10. Independent Contractors</H2>
+          <H2>11. Independent Contractors</H2>
           <P>Scoopers are independent contractors, NOT employees of Scoopers LLC. You are solely responsible for:</P>
           <UL>
             <li>Paying your own taxes (federal, state, and local)</li>
@@ -296,7 +345,7 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>11. Ratings & Reviews</H2>
+          <H2>12. Ratings & Reviews</H2>
           <P>Both Posters and Scoopers rate each other after job completion using category-based ratings (1–5 stars):</P>
           <UL>
             <li><strong>Scoopers are rated on:</strong> Quality of cleanup, thoroughness, timeliness, and communication</li>
@@ -306,7 +355,7 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>12. Account Suspension & Termination</H2>
+          <H2>13. Account Suspension & Termination</H2>
           <P>We reserve the right to suspend or terminate your account at any time for:</P>
           <UL>
             <li>Violation of these Terms of Service</li>
@@ -319,26 +368,94 @@ export default function Terms() {
         </Section>
 
         <Section>
-          <H2>13. Limitation of Liability</H2>
-          <P><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, SCOOPERS LLC, ITS FOUNDERS, EMPLOYEES, AND CONTRACTORS ARE NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APP, INCLUDING BUT NOT LIMITED TO INJURIES, ILLNESSES, PROPERTY DAMAGE, LOSS OF EARNINGS, OR ANY OTHER DAMAGES.</strong></P>
-          <P><strong>OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM ARISING FROM YOUR USE OF SCOOPERS SHALL NOT EXCEED THE AMOUNT YOU PAID TO SCOOPERS IN THE PAST 12 MONTHS, OR $100, WHICHEVER IS LESS.</strong></P>
+          <H2 color="#dc2626">14. LIMITATION OF LIABILITY & DISCLAIMER OF WARRANTIES</H2>
+
+          <Alert type="warning">
+            <H3>READ THIS SECTION CAREFULLY — YOU ARE WAIVING SIGNIFICANT LEGAL RIGHTS</H3>
+            <P style={{ marginBottom: 0 }}><strong>BY USING SCOOPERS, YOU AGREE THAT SCOOPERS LLC AND ITS FOUNDERS, OWNERS, EMPLOYEES, CONTRACTORS, PARTNERS, LICENSORS, AND AFFILIATES SHALL HAVE ABSOLUTELY NO LIABILITY TO YOU OR ANY THIRD PARTY FOR ANY CLAIMS, DAMAGES, LOSSES, OR INJURIES OF ANY KIND, REGARDLESS OF THE LEGAL THEORY.</strong></P>
+          </Alert>
+
+          <H3>DISCLAIMER OF WARRANTIES</H3>
+          <P><strong>SCOOPERS IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</strong> We make NO guarantees about:</P>
+          <UL>
+            <li>The quality, accuracy, or timeliness of cleanup work performed by scoopers or dog walkers</li>
+            <li>The truthfulness or accuracy of user-submitted information, photos, job descriptions, or ratings</li>
+            <li>The safety, reliability, or qualifications of any users (posters, scoopers, sponsors, or dog walkers)</li>
+            <li>The cleanliness of any block, sidewalk, or area before or after cleanup</li>
+            <li>The availability, uptime, or functionality of the app or any features</li>
+            <li>The security of your data, photos, location information, or payment information</li>
+            <li>The results of any block sponsorship, cleanup job, or maintenance sweep</li>
+            <li>The prevention of fraud, theft, harassment, or any illegal activity by users</li>
+          </UL>
+          <P><strong>WE DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</strong></P>
+
+          <H3>COMPLETE LIMITATION OF LIABILITY</H3>
+          <P><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, SCOOPERS LLC, ITS FOUNDERS, EMPLOYEES, CONTRACTORS, PARTNERS, LICENSORS, AND AFFILIATES ARE NOT LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING FROM OR RELATED TO YOUR USE OF SCOOPERS, INCLUDING BUT NOT LIMITED TO:</strong></P>
+          <UL>
+            <li>Any injuries, illnesses, or deaths resulting from cleanup work, contact with waste, or any activities related to the platform</li>
+            <li>Property damage, theft, vandalism, or loss of personal belongings during cleanup jobs or sponsorships</li>
+            <li>Harassment, threats, assault, or any harm caused by other users</li>
+            <li>Disputes between users, including payment disputes, rating disputes, or any conflicts</li>
+            <li>Inaccurate job descriptions, misrepresented conditions, or fraudulent posts</li>
+            <li>Failed payments, payment processing errors, or financial losses of any kind</li>
+            <li>Data breaches, privacy violations, or unauthorized access to your account or information</li>
+            <li>App errors, bugs, crashes, downtime, or loss of data</li>
+            <li>Reliance on GPS tracking, photo verification, or any app features</li>
+            <li>Tax liabilities, regulatory violations, or legal issues arising from your use of the platform</li>
+            <li>Loss of earnings, business opportunities, or any economic losses</li>
+            <li>Emotional distress, reputational harm, or any non-economic damages</li>
+            <li>ANY OTHER DAMAGES OR LOSSES WHATSOEVER, EVEN IF WE WERE ADVISED OF THE POSSIBILITY OF SUCH DAMAGES</li>
+          </UL>
+
+          <H3>NO LIABILITY FOR THIRD-PARTY CONDUCT</H3>
+          <P><strong>SCOOPERS LLC IS A PLATFORM ONLY.</strong> We do not employ, supervise, control, or screen scoopers, dog walkers, posters, or sponsors. We are NOT responsible for:</P>
+          <UL>
+            <li>The actions, inactions, conduct, or performance of any user</li>
+            <li>Any criminal activity, fraud, or illegal conduct by users</li>
+            <li>The quality, safety, or results of any cleanup work or block sponsorship</li>
+            <li>Background checks, verification, or vetting of users (we perform none)</li>
+            <li>Disputes, conflicts, or issues between users</li>
+          </UL>
+
+          <H3>INDEMNIFICATION</H3>
+          <P><strong>YOU AGREE TO DEFEND, INDEMNIFY, AND HOLD HARMLESS SCOOPERS LLC, ITS FOUNDERS, EMPLOYEES, CONTRACTORS, PARTNERS, LICENSORS, AND AFFILIATES FROM ANY CLAIMS, LAWSUITS, DAMAGES, LOSSES, LIABILITIES, COSTS, AND EXPENSES (INCLUDING REASONABLE ATTORNEYS' FEES) ARISING FROM OR RELATED TO:</strong></P>
+          <UL>
+            <li>Your use of the Scoopers platform</li>
+            <li>Your violation of these Terms of Service</li>
+            <li>Your violation of any law or regulation</li>
+            <li>Your posting or claiming of cleanup jobs or block sponsorships</li>
+            <li>Any injuries, damages, or losses you cause to others</li>
+            <li>Any disputes with other users</li>
+            <li>Your tax obligations or failure to pay taxes</li>
+            <li>Any content you submit, including photos, descriptions, or reviews</li>
+          </UL>
+
+          <H3>ASSUMPTION OF RISK</H3>
+          <P><strong>YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT:</strong></P>
+          <UL>
+            <li>Cleanup work involves inherent risks including exposure to waste, sharp objects, hazardous materials, animals, and other dangers</li>
+            <li>You voluntarily assume all risks associated with your use of Scoopers</li>
+            <li>You are solely responsible for assessing the safety of any cleanup job or sponsorship before accepting or participating</li>
+            <li>Scoopers LLC has no duty to warn you of any dangers, hazards, or risks</li>
+            <li>You release Scoopers LLC from any and all claims related to your participation in cleanup work</li>
+          </UL>
         </Section>
 
         <Section>
-          <H2>14. Arbitration & Governing Law</H2>
+          <H2>15. Arbitration & Governing Law</H2>
           <P>These Terms are governed by the laws of the State of New York, USA, without regard to conflict of law principles.</P>
           <P><strong>Arbitration Agreement:</strong> Any dispute arising from these Terms or your use of Scoopers shall be resolved through binding arbitration in New York, NY, rather than in court. You waive your right to a jury trial or to participate in a class action lawsuit.</P>
           <P>This arbitration agreement does not prevent you from bringing issues to the attention of federal, state, or local agencies. Such agencies can, if the law allows, seek relief against us on your behalf.</P>
         </Section>
 
         <Section>
-          <H2>15. Changes to These Terms</H2>
+          <H2>16. Changes to These Terms</H2>
           <P>We may update these Terms of Service at any time. We'll notify you of major changes via email or in-app notification. Continued use of the app after changes means you accept the new terms.</P>
           <P>If you don't agree to updated terms, you must stop using Scoopers and delete your account.</P>
         </Section>
 
         <Section>
-          <H2>16. Contact</H2>
+          <H2>17. Contact</H2>
           <P>Questions about these Terms? Email us at <a href="mailto:beau@scoopersnyc.com" style={{ color: 'var(--green)', fontWeight: '600' }}>beau@scoopersnyc.com</a></P>
           <P style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: '#888' }}>
             Scoopers LLC<br />
@@ -360,7 +477,7 @@ export default function Terms() {
           <p style={{
             fontSize: '1.1rem',
             marginBottom: '1rem',
-          }}>Made with 💩 in NYC</p>
+          }}>Made with 💩 in Brooklyn</p>
           <div style={{
             display: 'flex',
             gap: '2rem',

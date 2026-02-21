@@ -6,11 +6,11 @@ export default function About() {
     window.scrollTo(0, 0)
 
     // Update meta tags for SEO
-    document.title = "About Beau Lazear - Founder of Scoopers NYC Job Board | Brooklyn Dog Walker"
+    document.title = "About Beau Lazear - Founder of Scoopers NYC | Brooklyn Dog Walker"
 
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', "Meet Beau Lazear, Brooklyn dog walker, software developer, and founder of Scoopers NYC - a real-time job board on a map for street cleanup. Owner of Beau's Animal Care, walking 50+ dogs weekly. Built a two-sided marketplace solving NYC's dog waste and litter problem.")
+      metaDescription.setAttribute('content', "Meet Beau Lazear, Brooklyn dog walker, software developer, and founder of Scoopers NYC - a block sponsorship platform where dog walkers keep NYC blocks clean. Owner of Beau's Animal Care, walking 50+ dogs weekly. Tired of stepping in everyone else's sh*t.")
     }
 
     const ogTitle = document.querySelector('meta[property="og:title"]')
@@ -25,15 +25,15 @@ export default function About() {
 
     // Cleanup function to restore default meta tags
     return () => {
-      document.title = "Scoopers NYC - Real-Time Cleanup Job Board | Post Jobs, Earn Money Cleaning | Beau Lazear"
+      document.title = "Scoopers NYC - Sponsor Your Block | Dog Walkers Keep NYC Blocks Clean | Beau Lazear"
       if (metaDescription) {
-        metaDescription.setAttribute('content', "NYC's live job board on a map for street cleanup. Post dog waste & litter removal jobs on your block, or claim jobs and earn $5-$20 per cleanup. Real-time GPS tracking, photo verification, instant payment. Mobile app for posters & scoopers. Founded by Beau Lazear, Brooklyn dog walker. Spring 2026.")
+        metaDescription.setAttribute('content', "Sponsor your block for weekly cleanups by dog walkers ($40-$60/month) or post one-off jobs for dog waste, litter, and trash ($5-$20). Business sponsors show up on the public map. GPS tracking, photo verification, instant payment. Founded by Beau Lazear, Brooklyn dog walker. Spring 2026.")
       }
       if (ogTitle) {
-        ogTitle.setAttribute('content', "Scoopers - Job Board on a Map for NYC Street Cleanup | Beau Lazear")
+        ogTitle.setAttribute('content', "Scoopers - Clean blocks. Happy neighbors. Easy money.")
       }
       if (ogDescription) {
-        ogDescription.setAttribute('content', "Live job board for NYC cleanup. Post dog waste & litter jobs on your block ($5-$20), or earn money claiming jobs. Real-time GPS tracking, photo verification, instant payment through app. Two-sided marketplace connecting neighbors with local scoopers. Founded by Beau Lazear, Brooklyn dog walker & founder of Beau's Animal Care. Launching Spring 2026.")
+        ogDescription.setAttribute('content', "Sponsor your block for weekly cleanups by dog walkers ($40-$60/month). Or post one-off jobs for dog waste, litter, and trash ($5-$20). Business sponsors show up on the public map. GPS tracking, photo verification, instant payment. Founded by Beau Lazear, Brooklyn dog walker. Launching Spring 2026.")
       }
     }
   }, [])
@@ -95,15 +95,15 @@ export default function About() {
           </h2>
 
           <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-            I'm a dog walker in Brooklyn. I run Beau's Animal Care and walk 50+ dogs every week. Every day I see piles of dog waste on the same blocks. Nobody cleans them up.
+            I'm a dog walker in Brooklyn. I run Beau's Animal Care and walk 50+ dogs every week. Every day I see piles of dog waste on the same blocks. Nobody cleans them up. I was tired of stepping in everyone else's sh*t.
           </p>
 
           <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-            So I built Scoopers — a job board on a map. Residents post cleanup jobs with a price ($5–$20). Jobs appear live on a map. Dog walkers and locals claim jobs, clean, submit before/after photos, and get paid instantly. GPS-tracked. Photo-verified. Real-time.
+            So I built Scoopers — a platform where residents sponsor their block for weekly cleanups by dog walkers ($40–$60/month), or post one-off jobs for those messes they see every day ($5–$20). Business sponsors show up on the map. GPS-tracked. Photo-verified. Instant payment.
           </p>
 
           <p style={{ fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.6' }}>
-            I'm also a software developer. Built apps for my business and co-founded Voxxy. But Scoopers is different — it's a two-sided marketplace solving a real problem I see every single day. Launching Spring 2026 in NYC.
+            I'm also a software developer. Built apps for my business and co-founded Voxxy. But Scoopers is different — it's solving a real problem I step in every single day. Launching Spring 2026 in NYC.
           </p>
 
           <div style={{

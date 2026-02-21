@@ -101,7 +101,7 @@ export default function Privacy() {
             marginTop: '12px',
             fontWeight: '400',
           }}>
-            Last Updated: February 20, 2026
+            Last Updated: February 21, 2026
           </p>
         </div>
       </div>
@@ -150,10 +150,21 @@ export default function Privacy() {
           </UL>
           <P>Stripe handles all sensitive payment data. We only receive tokens and metadata needed to process transactions.</P>
 
+          <H3>Block Sponsorship Data</H3>
+          <UL>
+            <li><strong>Sponsor information:</strong> Display preference (first name, business name, or anonymous), selected block, schedule, monthly budget</li>
+            <li><strong>Dog walker information:</strong> Name, rating, neighborhoods served, Instagram handle, business name</li>
+            <li><strong>Sweep data:</strong> GPS verification of sweeps, pickup counts, photos, completion timestamps</li>
+            <li><strong>Contributions:</strong> Neighbor contribution amounts, payment history, contributor names (if public)</li>
+            <li><strong>Monthly ratings:</strong> Sponsor ratings of dog walker performance (quality, thoroughness, timeliness, communication)</li>
+          </UL>
+
           <H3>Usage & Activity Data</H3>
           <UL>
             <li>Jobs posted, claimed, completed, cancelled, disputed</li>
-            <li>Ratings and reviews given and received</li>
+            <li>Block sponsorships created, claimed, paused, cancelled</li>
+            <li>Sweeps performed and logged</li>
+            <li>Ratings and reviews given and received (one-off jobs and monthly sponsorship ratings)</li>
             <li>In-app messages sent during active jobs</li>
             <li>Pickup counts and job itemization details</li>
             <li>App navigation, feature usage, and interaction patterns</li>
@@ -217,6 +228,9 @@ export default function Privacy() {
             <li><strong>Posters see (when you claim their job):</strong> Your name, profile photo, rating, completed job count, live GPS location while en route/cleaning</li>
             <li><strong>Scoopers see (when browsing jobs):</strong> Poster's name (or "Anonymous" if they choose), job location, photos, description, price</li>
             <li><strong>Public profiles:</strong> Name, photo, ratings, review history, total jobs, pickup counts, reliability score</li>
+            <li><strong>Sponsored blocks (public map):</strong> Sponsor's chosen display name (first name, business name, or "A neighbor"), dog walker's name and profile, pickup stats, schedule, "Supported by X neighbors" count</li>
+            <li><strong>Business sponsors:</strong> If you choose to display your business name on a sponsored block, your business name is publicly visible on the map to promote community visibility</li>
+            <li><strong>Contributors:</strong> If you contribute to a block sponsorship, your support is counted publicly ("Supported by 3 neighbors") but your name/amount may or may not be shown depending on settings</li>
           </UL>
 
           <H3>Payment Processors (Stripe)</H3>
@@ -341,7 +355,23 @@ export default function Privacy() {
         </Section>
 
         <Section>
-          <H2>13. Contact Us</H2>
+          <H2>13. Disclaimer of Liability</H2>
+          <P><strong>SCOOPERS LLC IS NOT LIABLE FOR:</strong></P>
+          <UL>
+            <li>Any unauthorized access to or disclosure of your personal information due to hacking, data breaches, or security vulnerabilities</li>
+            <li>Any loss, theft, misuse, or unauthorized disclosure of your data by third-party service providers (including Stripe, cloud hosting providers, or analytics services)</li>
+            <li>Any privacy violations or data misuse by other users of the platform</li>
+            <li>Any consequences arising from your sharing of personal information with other users (photos, location, messages, etc.)</li>
+            <li>Any damages resulting from GPS tracking, photo sharing, or public visibility of your sponsorships, jobs, or profile</li>
+            <li>Identity theft, fraud, or any criminal activity involving your account or data</li>
+            <li>Any failure to protect your data to the fullest extent, despite our security measures</li>
+          </UL>
+          <P><strong>YOU USE SCOOPERS AT YOUR OWN RISK. WE MAKE NO GUARANTEES ABOUT THE PRIVACY OR SECURITY OF YOUR DATA.</strong> While we implement industry-standard security practices, no system is 100% secure. You are responsible for protecting your account credentials and for any consequences of sharing your location, photos, or personal information through the platform.</P>
+          <P><strong>By using Scoopers, you acknowledge and accept these privacy risks and release Scoopers LLC from any liability related to data security, privacy violations, or unauthorized access to your information.</strong></P>
+        </Section>
+
+        <Section>
+          <H2>14. Contact Us</H2>
           <P>Questions or concerns about your privacy? Want to exercise your privacy rights? Contact us:</P>
           <P style={{ marginTop: '1.5rem', fontSize: '1rem', fontWeight: '600' }}>
             Email: <a href="mailto:beau@scoopersnyc.com" style={{ color: 'var(--green)', fontWeight: '600' }}>beau@scoopersnyc.com</a>
@@ -367,7 +397,7 @@ export default function Privacy() {
           <p style={{
             fontSize: '1.1rem',
             marginBottom: '1rem',
-          }}>Made with 💩 in NYC</p>
+          }}>Made with 💩 in Brooklyn</p>
           <div style={{
             display: 'flex',
             gap: '2rem',
