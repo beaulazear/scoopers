@@ -105,11 +105,8 @@ export default function LandingPage() {
               <p className={`intro-line-hero ${introPhase >= 3 ? 'fade-in' : ''}`}>
                 So was I.
               </p>
-              <p className={`intro-line-story ${introPhase >= 3 ? 'fade-in' : ''}`}>
-                A Brooklyn dog walker tired of stepping in everyone else's sh*t.
-              </p>
               <p className={`intro-line-solution ${introPhase >= 4 ? 'fade-in' : ''}`}>
-                Except now there's a solution.
+                So I came up with a solution.
               </p>
             </div>
           )}
@@ -292,39 +289,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Mini FAQ */}
-      <section className="faq" aria-labelledby="faq-heading">
-        <div className="container">
-          <h2 id="faq-heading" className="visually-hidden">Frequently Asked Questions About Scoopers NYC</h2>
-          <div className="faq-grid-new">
-            <div className="faq-large">
-              <h3 className="faq-q-large">How does it work?</h3>
-              <p className="faq-a-large">Two ways: Sponsor your block for recurring weekly cleanups by dog walkers ($40-$60/month). Your block shows green on the map. Neighbors can chip in. Or post one-off jobs for dog waste, litter, trash ($5-$20). Jobs appear live on the map. Scoopers claim them, clean within 60 minutes, submit photos, get paid instantly through Stripe. GPS-verified. Photo-verified.</p>
-            </div>
-
-            <div className="faq-small">
-              <h3 className="faq-q-small">What kind of messes?</h3>
-              <p className="faq-a-small">Dog waste, litter, trash piles. No large items, no hazardous materials, no liquids.</p>
-            </div>
-
-            <div className="faq-small">
-              <h3 className="faq-q-small">What if nobody claims my job?</h3>
-              <p className="faq-a-small">Jobs expire after 24 hours. You don't pay unless a scooper completes the work. Bump the price to attract more scoopers.</p>
-            </div>
-
-            <div className="faq-small">
-              <h3 className="faq-q-small">How do scoopers get paid?</h3>
-              <p className="faq-a-small">Instantly through Stripe after the poster confirms completion. Payment goes directly to your bank account.</p>
-            </div>
-
-            <div className="faq-small faq-disclaimer">
-              <h3 className="faq-q-small">When does it launch?</h3>
-              <p className="faq-a-small">Spring 2026 in NYC (all 5 boroughs). iOS app. Join the waitlist to be first.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="final-cta" aria-labelledby="final-cta-heading" aria-label="Join waitlist for NYC dog waste cleanup service">
         <div className="container">
@@ -369,6 +333,7 @@ export default function LandingPage() {
           <p className="footer-tagline">Made with 💩 in Brooklyn</p>
           <div className="footer-links">
             <Link to="/about">About</Link>
+            <Link to="/faq">FAQ</Link>
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
           </div>

@@ -1,0 +1,32 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect width="800" height="800" fill="#000000"/>
+
+  <!-- Main text -->
+  <text x="400" y="220" font-family="Lowraw, Arial Black, sans-serif" font-size="64" font-weight="900" fill="#00D084" text-anchor="middle" letter-spacing="-1">
+    SPONSOR YOUR
+  </text>
+  <text x="400" y="300" font-family="Lowraw, Arial Black, sans-serif" font-size="64" font-weight="900" fill="#00D084" text-anchor="middle" letter-spacing="-1">
+    BLOCK
+  </text>
+  <text x="400" y="440" font-family="Lowraw, Arial Black, sans-serif" font-size="86" font-weight="900" fill="#dc2626" text-anchor="middle" letter-spacing="-2">
+    SHOW YOU
+  </text>
+  <text x="400" y="530" font-family="Lowraw, Arial Black, sans-serif" font-size="86" font-weight="900" fill="#dc2626" text-anchor="middle" letter-spacing="-2">
+    CARE
+  </text>
+
+  <!-- QR Code -->
+  <rect x="310" y="580" width="180" height="180" fill="#FFFFFF" rx="8"/>
+  <image
+    x="320"
+    y="590"
+    width="160"
+    height="160"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQMAAABB54RGAAAABlBMVEUAAAD///+l2Z/dAAAAAnRSTlP//8i138cAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAFOSURBVGiB7djLrcQgDAVQSykgJaV1SqIAJE/wB8h7Gk123MVlkYFwZmVhHIu+HkJKSkpKSopBJcahcmnzmWrN1xcpFPVFvUHpqpy5XHZJYWgP4mV79yPC6bODFJj2pWRgSbFpOdt4RwpKNSIZ4XyVX0k30aUgqfPxq3Yh3ULnMHBXJQMsW6QY9D53LZOmqYxu/J0UiVqJb19lVufnrPkpfASWdDvN4qO/nsfQZue/25B0NxWJynHxatG1P5GCUckv54zk1/xKup326r74o0l0E0f6VFI4GifQhmfO0a4ihaLWpL9yloFtkpUKKRSt42LzzBmXXWyQItE5PIgjnKSANKKYNWTQOjwpFPWFN4AjX645lBSLVnkU+396v6Sg9HnZqWalQgpIl95HyQ8AUjRqP95XjMwZMa2kcDTGLBqPpRVCikVfDVJSUlJS0u30A5qKTxRKu7hXAAAAAElFTkSuQmCC"/>
+
+  <!-- URL -->
+  <text x="400" y="780" font-family="Lowraw, Arial Black, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" text-anchor="middle">
+    SCOOPERSNYC.COM
+  </text>
+</svg>
