@@ -369,7 +369,18 @@
 .hero-subtitle {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
 .hero-description {
@@ -412,18 +423,33 @@
 .cta-button {
   padding: 18px 32px;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 900;
   background: var(--dark);
   color: var(--off-white);
   border: 3px solid var(--dark);
   border-radius: 12px;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 4px 4px 0 var(--dark);
+  position: relative;
 }
 
 .cta-button:hover:not(:disabled) {
   background: var(--orange);
   border-color: var(--orange);
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--dark);
+}
+
+.cta-button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+.cta-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 4px 4px 0 rgba(26, 26, 26, 0.3);
 }
 
 .cta-button:disabled {
@@ -672,8 +698,8 @@
 /* Earn Money */
 .earn-money {
   padding: 100px 20px;
-  background: var(--green);
-  color: var(--dark);
+  background: var(--dark);
+  color: var(--off-white);
 }
 
 .earn-content {
@@ -687,6 +713,7 @@
   font-weight: 900;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  color: var(--green);
 }
 
 .earn-description {
@@ -696,13 +723,14 @@
 }
 
 .earn-callout {
-  background: var(--dark);
-  color: var(--green);
+  background: var(--green);
+  color: var(--dark);
   padding: 2rem;
   border-radius: 12px;
   font-size: 1.3rem;
   font-weight: 700;
   margin-top: 2rem;
+  border: 3px solid var(--green);
 }
 
 /* Community */
@@ -844,6 +872,26 @@
   font-weight: 500;
 }
 
+/* Section Divider */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--green), transparent);
+  max-width: 200px;
+  margin: 0 auto 3rem;
+  opacity: 0.3;
+}
+
+/* Mobile Typography Tightening */
+@media (max-width: 768px) {
+  .hero-title,
+  .problem-title,
+  .sponsorship-title,
+  .final-cta-title {
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .email-form {
@@ -897,10 +945,11 @@
 }
 
 .legal-header h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
   font-weight: 900;
   margin-bottom: 0.5rem;
-  line-height: 1.2;
+  line-height: 1;
+  color: var(--green);
 }
 
 .legal-updated {
@@ -947,14 +996,15 @@
   padding: 2rem;
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid var(--green);
+  border-left: 6px solid var(--green);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-left-width 0.2s;
 }
 
 .faq-item:hover {
-  transform: translateX(4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateX(8px);
+  border-left-width: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .faq-item h3 {

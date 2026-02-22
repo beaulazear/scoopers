@@ -129,8 +129,8 @@ export default function LandingPage() {
             Clean blocks. Happy neighbors. Easy money.
           </p>
 
-          <p className="hero-description">
-            Sponsor your block for weekly cleanups. Or post one-off jobs for those messes you see every day.
+          <p className="hero-tagline">
+            Made with 💩 in Brooklyn
           </p>
 
           {!submitted ? (
@@ -177,9 +177,9 @@ export default function LandingPage() {
       {/* The Problem */}
       <section className="problem" aria-labelledby="problem-heading">
         <div className="container">
-          <h2 id="problem-heading" className="problem-title">Tired of stepping in dog sh*t?</h2>
+          <h2 id="problem-heading" className="problem-title">Every block has that one spot.</h2>
           <p className="problem-text">
-            Every block has that one spot. Everyone walks around it. Nobody does anything.
+            Everyone walks around it. Nobody does anything.
           </p>
           <p className="problem-text-big">
             Until now.
@@ -190,6 +190,7 @@ export default function LandingPage() {
       {/* Block Sponsorship */}
       <section className="sponsorship" aria-labelledby="sponsorship-heading">
         <div className="container">
+          <div className="section-divider"></div>
           <h2 id="sponsorship-heading" className="sponsorship-title">
             Sponsor your block.
           </h2>
@@ -223,6 +224,7 @@ export default function LandingPage() {
       {/* One-Off Jobs */}
       <section className="how-it-works" aria-labelledby="how-it-works-heading">
         <div className="container">
+          <div className="section-divider"></div>
           <h2 id="how-it-works-heading" className="how-works-title">Or post a one-off job.</h2>
           <p className="how-works-subtitle">
             Dog waste, litter, trash piles — those messes you see every day. Set a price. Someone claims it. It's gone.
@@ -261,6 +263,7 @@ export default function LandingPage() {
       {/* Community */}
       <section className="community" aria-labelledby="community-heading">
         <div className="container">
+          <div className="section-divider"></div>
           <div className="community-content">
             <h2 id="community-heading" className="community-title">Cleaner blocks. Happier neighbors.</h2>
             <p className="community-text">

@@ -39,7 +39,7 @@ export default function FAQ() {
 
           {/* How It Works */}
           <section className="faq-section">
-            <h2>How It Works</h2>
+            <h2>📍 How This Works</h2>
 
             <div className="faq-item">
               <h3>How does Scoopers work?</h3>
@@ -62,7 +62,7 @@ export default function FAQ() {
 
           {/* What We Clean */}
           <section className="faq-section">
-            <h2>What We Clean</h2>
+            <h2>🚫 What We DON'T Clean (Important!)</h2>
 
             <div className="faq-item">
               <h3>What kind of messes do you clean?</h3>
@@ -98,7 +98,7 @@ export default function FAQ() {
 
           {/* Payments */}
           <section className="faq-section">
-            <h2>Payments</h2>
+            <h2>💰 Making Money</h2>
 
             <div className="faq-item">
               <h3>How much does it cost?</h3>
@@ -125,7 +125,7 @@ export default function FAQ() {
 
           {/* Block Sponsorships */}
           <section className="faq-section">
-            <h2>Block Sponsorships</h2>
+            <h2>🏘️ Block Sponsorships</h2>
 
             <div className="faq-item">
               <h3>What is a block sponsorship?</h3>
@@ -150,7 +150,7 @@ export default function FAQ() {
 
           {/* Safety & Quality */}
           <section className="faq-section">
-            <h2>Safety & Quality</h2>
+            <h2>✅ Safety & Quality</h2>
 
             <div className="faq-item">
               <h3>Do you background check scoopers?</h3>
@@ -170,7 +170,7 @@ export default function FAQ() {
 
           {/* Technical */}
           <section className="faq-section">
-            <h2>Technical</h2>
+            <h2>📱 The App</h2>
 
             <div className="faq-item">
               <h3>Is there an app?</h3>
@@ -190,7 +190,7 @@ export default function FAQ() {
 
           {/* Still have questions? */}
           <section className="faq-section">
-            <h2>Still Have Questions?</h2>
+            <h2>💬 Still Have Questions?</h2>
             <p>Email us at <a href="mailto:beau@scoopersnyc.com" style={{ color: 'var(--green)', fontWeight: '700' }}>beau@scoopersnyc.com</a></p>
             <p>We'll get back to you within 24 hours.</p>
           </section>
