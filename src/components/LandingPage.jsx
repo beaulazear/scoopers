@@ -38,21 +38,12 @@ export default function LandingPage() {
     // Phase 2: Fade out problem (3s total)
     timers.push(setTimeout(() => setIntroPhase(2), 3000))
 
-    // Phase 3: Show Beau photo AND greeting together (3.5s total)
-    timers.push(setTimeout(() => setIntroPhase(3), 3500))
-
-    // Phase 4: Show story text (5s total)
-    timers.push(setTimeout(() => setIntroPhase(4), 5000))
-
-    // Phase 5: Fade out Beau slide (8s total)
-    timers.push(setTimeout(() => setIntroPhase(5), 8000))
-
-    // Phase 6: End intro, show main content (9s total)
+    // Phase 3: End intro, show main content (3.5s total)
     timers.push(setTimeout(() => {
       setShowIntro(false)
       setShowMainContent(true)
       sessionStorage.setItem('hasSeenIntro', 'true')
-    }, 9000))
+    }, 3500))
 
     return () => timers.forEach(timer => clearTimeout(timer))
   }, [triggerIntro])
@@ -99,16 +90,6 @@ export default function LandingPage() {
             <h1 className={`intro-line intro-line-1 ${introPhase >= 1 ? 'fade-in' : ''} ${introPhase >= 2 ? 'fade-out' : ''}`}>
               Tired of stepping in dog sh*t?
             </h1>
-          )}
-          {introPhase >= 3 && (
-            <div className={`intro-text-slide ${introPhase >= 5 ? 'fade-out' : ''}`}>
-              <p className={`intro-line-hero ${introPhase >= 3 ? 'fade-in' : ''}`}>
-                So was I.
-              </p>
-              <p className={`intro-line-solution ${introPhase >= 4 ? 'fade-in' : ''}`}>
-                So I came up with a solution.
-              </p>
-            </div>
           )}
         </div>
         <button
