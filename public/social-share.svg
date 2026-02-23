@@ -1,20 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <!-- Green background matching your brand -->
+  <!-- Green background -->
   <rect width="1200" height="630" fill="#00D084"/>
 
-  <!-- Subtle circle background for the S -->
-  <circle cx="600" cy="315" r="200" fill="#1A1A1A" opacity="0.08"/>
+  <!-- Circular logo background -->
+  <circle cx="280" cy="315" r="200" fill="#1A1A1A"/>
 
-  <!-- Large S logo -->
+  <!-- S in circle -->
   <text
-    x="600"
-    y="315"
+    x="280"
+    y="330"
     font-family="Lowraw, Arial, sans-serif"
     font-size="280"
     font-weight="900"
-    fill="#1A1A1A"
+    fill="#00D084"
     text-anchor="middle"
-    dominant-baseline="central">
+    dominant-baseline="middle"
+    letter-spacing="-0.02em">
     S
+  </text>
+
+  <!-- SCOOPERS text -->
+  <text
+    x="540"
+    y="220"
+    font-family="Lowraw, Arial, sans-serif"
+    font-size="120"
+    font-weight="900"
+    fill="#1A1A1A"
+    text-anchor="start"
+    letter-spacing="-0.02em">
+    SCOOPERS
+  </text>
+
+  <!-- Tagline -->
+  <text
+    x="540"
+    y="320"
+    font-family="Lowraw, Arial, sans-serif"
+    font-size="36"
+    font-weight="700"
+    fill="#1A1A1A"
+    text-anchor="start">
+    Clean blocks.
+  </text>
+  <text
+    x="540"
+    y="380"
+    font-family="Lowraw, Arial, sans-serif"
+    font-size="36"
+    font-weight="700"
+    fill="#1A1A1A"
+    text-anchor="start">
+    Happy neighbors.
+  </text>
+  <text
+    x="540"
+    y="440"
+    font-family="Lowraw, Arial, sans-serif"
+    font-size="36"
+    font-weight="700"
+    fill="#1A1A1A"
+    text-anchor="start">
+    Easy money.
   </text>
 </svg>

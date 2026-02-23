@@ -15,6 +15,18 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/profile-logo-500.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/profile-logo-1000.png",
+      "sizes": "1000x1000",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

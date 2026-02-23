@@ -127,6 +127,9 @@ export default function LandingPage() {
             SCOOPERS
           </h1>
           <p className="hero-subtitle" role="doc-subtitle">
+            Dog walkers keeping your block clean.
+          </p>
+          <p className="hero-tagline-secondary">
             Clean blocks. Happy neighbors. Easy money.
           </p>
 
@@ -188,6 +191,40 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Sightings - Community Reporting */}
+      <section className="sightings" aria-labelledby="sightings-heading">
+        <div className="container">
+          <div className="section-divider"></div>
+          <h2 id="sightings-heading" className="sightings-title">
+            See dog sh*t? Report it.
+          </h2>
+          <p className="sightings-description">
+            Anyone can report dog waste on the public map. No login required. Just snap a photo, drop a pin, and it's visible to everyone in the neighborhood. Sightings create social pressure. Sightings create demand. Sightings create clean blocks.
+          </p>
+          <div className="sightings-grid">
+            <div className="sightings-benefit">
+              <h3>15-second reporting</h3>
+              <p>Take a photo, select the block, tag the location. Done. Visible on the public map immediately.</p>
+            </div>
+            <div className="sightings-benefit">
+              <h3>Community confirmation</h3>
+              <p>Neighbors tap "I've Seen This Too" to confirm. High confirmation counts create urgency.</p>
+            </div>
+            <div className="sightings-benefit">
+              <h3>Convert to paid job</h3>
+              <p>Anyone can turn a sighting into a paid cleanup job. You don't have to be the one who reported it.</p>
+            </div>
+            <div className="sightings-benefit">
+              <h3>Public accountability</h3>
+              <p>Dirty blocks show yellow warning pins. Sponsored blocks glow green. The contrast tells the story.</p>
+            </div>
+          </div>
+          <div className="sightings-callout">
+            Sightings expire after 48 hours. Confirmations extend the timer. The map shows the real-time state of your neighborhood.
+          </div>
+        </div>
+      </section>
+
       {/* Block Sponsorship */}
       <section className="sponsorship" aria-labelledby="sponsorship-heading">
         <div className="container">
@@ -196,12 +233,12 @@ export default function LandingPage() {
             Sponsor your block.
           </h2>
           <p className="sponsorship-description">
-            Hire a dog walker to keep your block clean every week. They're already walking it 3x a day. Pay them $40-$60/month to sweep it on a schedule. Your block gets a green badge on the map. Neighbors can chip in.
+            Hire a dog walker to sweep your block for dog poop. They're already walking it 3x a day. Pay them $20-$60/month for biweekly or weekly sweeps. Your block gets a green badge on the map. Neighbors can chip in.
           </p>
           <div className="sponsorship-grid">
             <div className="sponsorship-benefit">
-              <h3>Weekly maintenance</h3>
-              <p>Professional dog walkers sweep your block weekly or biweekly.</p>
+              <h3>Biweekly or weekly sweeps</h3>
+              <p>Dog walkers sweep your block for poop on a recurring schedule. Biweekly recommended.</p>
             </div>
             <div className="sponsorship-benefit">
               <h3>Public proof</h3>
@@ -228,7 +265,7 @@ export default function LandingPage() {
           <div className="section-divider"></div>
           <h2 id="how-it-works-heading" className="how-works-title">Or post a one-off job.</h2>
           <p className="how-works-subtitle">
-            Dog waste, litter, trash piles — those messes you see every day. Set a price. Someone claims it. It's gone.
+            See a sighting on the map? Tap "Clean This Up" to convert it to a paid job. Or post directly. Either way: you set the price, a dog walker claims it, it gets cleaned.
           </p>
           <div className="how-simple" role="list">
             <div className="simple-step" role="listitem">
@@ -244,7 +281,7 @@ export default function LandingPage() {
             </div>
           </div>
           <p className="how-note">
-            Most jobs are $5-$20. Jobs appear on a live map. Scoopers arrive within 60 minutes and submit before/after photos.
+            Most jobs are $5-$20. Dog poop only. Jobs appear on the live map. Dog walkers arrive within 60 minutes and submit before/after photos.
           </p>
         </div>
       </section>
@@ -317,7 +354,6 @@ export default function LandingPage() {
         <div className="container">
           <p className="footer-tagline">Made with 💩 in Brooklyn</p>
           <div className="footer-links">
-            <Link to="/about">About</Link>
             <Link to="/faq">FAQ</Link>
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>

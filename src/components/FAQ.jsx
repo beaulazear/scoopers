@@ -43,9 +43,10 @@ export default function FAQ() {
 
             <div className="faq-item">
               <h3>How does Scoopers work?</h3>
-              <p>Two ways:</p>
-              <p><strong>1. Block Sponsorships (Recurring)</strong> - Hire a dog walker to keep your block clean every week. They're already walking it 3x a day. Pay them $40-$60/month to sweep it on a schedule. Your block gets a green badge on the map. Neighbors can chip in to lower your cost.</p>
-              <p><strong>2. One-Off Jobs</strong> - See a mess? Post a job with a price ($5-$20). Jobs appear live on the map. Scoopers claim them, clean within 60 minutes, submit before/after photos, get paid instantly through Stripe.</p>
+              <p>Three ways:</p>
+              <p><strong>1. Sightings (Community Reporting)</strong> - See dog poop on your block? Report it to the public map. No login required. Just snap a photo and drop a pin. Anyone can see it and anyone can convert it to a paid cleanup job. Sightings create social pressure and drive action.</p>
+              <p><strong>2. One-Off Jobs</strong> - Convert a sighting to a paid job or post directly. Set a price ($5-$20). Dog walkers claim it, clean within 60 minutes, submit before/after photos, get paid instantly through Stripe.</p>
+              <p><strong>3. Block Sponsorships (Recurring)</strong> - Hire a dog walker to sweep your block for poop on a schedule. Pay $20-$60/month for biweekly or weekly sweeps. Your block gets a green badge on the map. Neighbors can chip in to lower your cost.</p>
               <p>Everything is GPS-verified and photo-verified.</p>
             </div>
 
@@ -60,34 +61,61 @@ export default function FAQ() {
             </div>
           </section>
 
+          {/* Sightings */}
+          <section className="faq-section">
+            <h2>👀 Sightings & Community Reporting</h2>
+
+            <div className="faq-item">
+              <h3>What are sightings?</h3>
+              <p>Sightings are community reports of dog poop on public sidewalks. Anyone can report them—no login required. Just open the app, snap a photo, select the block, and submit. The sighting appears on the public map for everyone to see.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Who can see sightings?</h3>
+              <p>Everyone. The map is public. No login required to view. This creates community accountability—dirty blocks are visible to the whole neighborhood.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How long do sightings last?</h3>
+              <p>Sightings expire after 48 hours. But if others tap "I've Seen This Too," the expiration timer extends. High-confirmation sightings stay visible longer and create more urgency for cleanup.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can I convert a sighting to a paid job?</h3>
+              <p>Yes! Anyone can tap "Clean This Up" on a sighting to convert it to a paid job. The photo and location are pre-filled. You just set a price and confirm payment. You don't have to be the person who originally reported it.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can I tag businesses in sightings?</h3>
+              <p>Yes. If the poop is in front of a business, you can tag it. The business name appears on the sighting. This creates social pressure for businesses to sponsor their block or take action.</p>
+            </div>
+          </section>
+
           {/* What We Clean */}
           <section className="faq-section">
             <h2>🚫 What We DON'T Clean (Important!)</h2>
 
             <div className="faq-item">
               <h3>What kind of messes do you clean?</h3>
-              <p>We clean:</p>
-              <ul>
-                <li>Dog waste (solid poop only)</li>
-                <li>Litter (bottles, cans, wrappers, cigarette butts)</li>
-                <li>Small trash piles on sidewalks</li>
-              </ul>
+              <p><strong>Dog waste only.</strong> Solid poop on public sidewalks. That's it.</p>
+              <p>Scoopers is a poop-only platform. We don't clean litter, trash, or any other debris. Just dog poop.</p>
             </div>
 
             <div className="faq-item">
               <h3>What do you NOT clean?</h3>
               <p><strong>We do NOT clean:</strong></p>
               <ul>
-                <li><strong>Diarrhea or liquid waste</strong> - Cannot be picked up with bags. Health hazard.</li>
+                <li><strong>Litter, trash, or debris</strong> - Poop only, not general cleanup</li>
+                <li><strong>Diarrhea or liquid waste</strong> - Cannot be bagged, health hazard</li>
                 <li><strong>Vomit</strong> - Health hazard, requires specialized cleaning</li>
                 <li><strong>Blood or bodily fluids</strong> - Health hazard, biohazard cleanup required</li>
                 <li><strong>Needles or sharps</strong> - Dangerous, requires special disposal</li>
                 <li><strong>Large items</strong> - Furniture, mattresses, appliances (use 311)</li>
                 <li><strong>Hazardous materials</strong> - Chemicals, paint, batteries, etc.</li>
                 <li><strong>Dead animals</strong> - Contact NYC 311 for removal</li>
-                <li><strong>Private property</strong> - We only clean public sidewalks and streets</li>
+                <li><strong>Private property</strong> - Public sidewalks only (curb to building line)</li>
+                <li><strong>Non-dog animal waste</strong> - Dog poop only</li>
               </ul>
-              <p>If you're unsure, post the job with photos and scoopers will decide if they can handle it.</p>
             </div>
 
             <div className="faq-item">
@@ -102,8 +130,9 @@ export default function FAQ() {
 
             <div className="faq-item">
               <h3>How much does it cost?</h3>
-              <p><strong>Block Sponsorships:</strong> $40-$60/month depending on block size and frequency (weekly or biweekly). Neighbors can contribute $5-$25/month to lower your cost.</p>
+              <p><strong>Sightings:</strong> Free to report. Anyone can report dog poop sightings on the public map at no cost.</p>
               <p><strong>One-Off Jobs:</strong> You set the price. Most jobs are $5-$20 depending on the size of the mess.</p>
+              <p><strong>Block Sponsorships:</strong> $20-$60/month depending on block size and frequency. Biweekly is recommended and cheaper than weekly. Neighbors can contribute $5-$25/month to lower your cost.</p>
             </div>
 
             <div className="faq-item">
@@ -203,7 +232,6 @@ export default function FAQ() {
         <div className="container">
           <p className="footer-tagline">Made with 💩 in Brooklyn</p>
           <div className="footer-links">
-            <Link to="/about">About</Link>
             <Link to="/faq">FAQ</Link>
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate All Scoopers Branding Assets</title>
+    <style>
+        @font-face {
+            font-family: 'Lowraw';
+            src: url('/fonts/Lowraw.ttf') format('truetype'),
+                 url('/fonts/Lowraw.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .instructions {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .asset {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .asset-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #1A1A1A;
+        }
+
+        .asset-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .preview {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 150px;
+        }
+
+        .preview img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background: #00D084;
+            color: #1A1A1A;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 208, 132, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .download-all {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-all button {
+            max-width: 400px;
+            background: #1A1A1A;
+            color: #00D084;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+
+        canvas {
+            display: none;
+        }
+
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px 24px;
+            background: #00D084;
+            color: #1A1A1A;
+            border-radius: 12px;
+            font-weight: 600;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoopers Branding Assets Generator</h1>
+
+        <div class="instructions">
+            <p><strong>All your branding assets in one place!</strong></p>
+            <p>Download each image individually or click "Download All" to get everything at once.</p>
+            <p>These will replace your old branding files with the new clean design.</p>
+        </div>
+
+        <div class="download-all">
+            <button onclick="downloadAll()">📦 Download All Assets</button>
+        </div>
+
+        <div class="grid">
+            <!-- Profile Logo 500 -->
+            <div class="asset">
+                <div class="asset-title">profile-logo-500.png</div>
+                <div class="asset-desc">500x500px - Medium resolution profile logo</div>
+                <div class="preview">
+                    <canvas id="preview-500" width="200" height="200" style="display: block; border-radius: 50%;"></canvas>
+                </div>
+                <button onclick="downloadImage('profile-logo-500.png', 500)">Download 500x500</button>
+            </div>
+
+            <!-- Profile Logo 1000 -->
+            <div class="asset">
+                <div class="asset-title">profile-logo-1000.png</div>
+                <div class="asset-desc">1000x1000px - High resolution profile logo</div>
+                <div class="preview">
+                    <canvas id="preview-1000" width="200" height="200" style="display: block; border-radius: 50%;"></canvas>
+                </div>
+                <button onclick="downloadImage('profile-logo-1000.png', 1000)">Download 1000x1000</button>
+            </div>
+
+            <!-- Social Share -->
+            <div class="asset">
+                <div class="asset-title">social-share.png</div>
+                <div class="asset-desc">1200x630px - Open Graph image for social media</div>
+                <div class="preview">
+                    <canvas id="preview-social" width="300" height="157" style="display: block;"></canvas>
+                </div>
+                <button onclick="downloadSocialShare()">Download 1200x630</button>
+            </div>
+
+            <!-- Social Simple -->
+            <div class="asset">
+                <div class="asset-title">social-simple.png</div>
+                <div class="asset-desc">1200x630px - Simple social share image</div>
+                <div class="preview">
+                    <canvas id="preview-simple" width="300" height="157" style="display: block;"></canvas>
+                </div>
+                <button onclick="downloadSocialSimple()">Download 1200x630</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">✓ Downloaded!</div>
+
+    <!-- Hidden canvases for generation -->
+    <canvas id="canvas-500" width="500" height="500"></canvas>
+    <canvas id="canvas-1000" width="1000" height="1000"></canvas>
+    <canvas id="canvas-social" width="1200" height="630"></canvas>
+    <canvas id="canvas-simple" width="1200" height="630"></canvas>
+
+    <script>
+        // Draw circular profile logo
+        function drawProfileLogo(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const radius = size / 2;
+
+            // Draw circular background
+            ctx.fillStyle = '#00D084';
+            ctx.beginPath();
+            ctx.arc(radius, radius, radius, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw S
+            ctx.fillStyle = '#1A1A1A';
+            ctx.font = `900 ${size * 0.7}px Lowraw, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.letterSpacing = '-0.02em';
+            ctx.fillText('S', radius, radius + size * 0.05);
+        }
+
+        // Draw social share image
+        function drawSocialShare(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+
+            // Draw background
+            ctx.fillStyle = '#00D084';
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Draw circular logo
+            const centerX = 280;
+            const centerY = 315;
+            const radius = 200;
+
+            ctx.fillStyle = '#1A1A1A';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw S in circle
+            ctx.fillStyle = '#00D084';
+            ctx.font = '900 280px Lowraw, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('S', centerX, centerY + 15);
+
+            // Draw SCOOPERS text
+            ctx.fillStyle = '#1A1A1A';
+            ctx.font = '900 120px Lowraw, sans-serif';
+            ctx.textAlign = 'left';
+            ctx.letterSpacing = '-0.02em';
+            ctx.fillText('SCOOPERS', 540, 220);
+
+            // Draw tagline
+            ctx.font = '700 36px Lowraw, sans-serif';
+            ctx.fillText('Clean blocks.', 540, 320);
+            ctx.fillText('Happy neighbors.', 540, 380);
+            ctx.fillText('Easy money.', 540, 440);
+        }
+
+        // Draw social simple image
+        function drawSocialSimple(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+
+            // Draw background
+            ctx.fillStyle = '#00D084';
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Draw circular logo
+            const centerX = 600;
+            const centerY = 315;
+            const radius = 250;
+
+            ctx.fillStyle = '#1A1A1A';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw S
+            ctx.fillStyle = '#00D084';
+            ctx.font = '900 350px Lowraw, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.letterSpacing = '-0.02em';
+            ctx.fillText('S', centerX, centerY + 20);
+        }
+
+        // Download functions
+        function downloadImage(filename, size) {
+            const canvasId = `canvas-${size}`;
+            drawProfileLogo(canvasId, size);
+
+            document.fonts.ready.then(() => {
+                const canvas = document.getElementById(canvasId);
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showSuccess(`✓ ${filename} downloaded!`);
+            });
+        }
+
+        function downloadSocialShare() {
+            drawSocialShare('canvas-social');
+
+            document.fonts.ready.then(() => {
+                const canvas = document.getElementById('canvas-social');
+                const link = document.createElement('a');
+                link.download = 'social-share.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showSuccess('✓ social-share.png downloaded!');
+            });
+        }
+
+        function downloadSocialSimple() {
+            drawSocialSimple('canvas-simple');
+
+            document.fonts.ready.then(() => {
+                const canvas = document.getElementById('canvas-simple');
+                const link = document.createElement('a');
+                link.download = 'social-simple.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showSuccess('✓ social-simple.png downloaded!');
+            });
+        }
+
+        async function downloadAll() {
+            showSuccess('⏳ Generating all assets...');
+
+            await document.fonts.ready;
+
+            // Small delay between downloads
+            await new Promise(resolve => setTimeout(resolve, 200));
+            downloadImage('profile-logo-500.png', 500);
+
+            await new Promise(resolve => setTimeout(resolve, 200));
+            downloadImage('profile-logo-1000.png', 1000);
+
+            await new Promise(resolve => setTimeout(resolve, 200));
+            downloadSocialShare();
+
+            await new Promise(resolve => setTimeout(resolve, 200));
+            downloadSocialSimple();
+
+            showSuccess('✓ All assets downloaded!');
+        }
+
+        function showSuccess(message) {
+            const msg = document.getElementById('successMessage');
+            msg.textContent = message;
+            msg.style.display = 'block';
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 3000);
+        }
+
+        // Draw previews on load
+        window.addEventListener('load', () => {
+            document.fonts.ready.then(() => {
+                // Draw previews
+                drawProfileLogo('preview-500', 200);
+                drawProfileLogo('preview-1000', 200);
+
+                const previewSocial = document.getElementById('preview-social');
+                const ctxSocial = previewSocial.getContext('2d');
+                ctxSocial.scale(0.25, 0.25);
+                drawSocialShare('preview-social');
+
+                const previewSimple = document.getElementById('preview-simple');
+                const ctxSimple = previewSimple.getContext('2d');
+                ctxSimple.scale(0.25, 0.25);
+                drawSocialSimple('preview-simple');
+            });
+        });
+    </script>
+</body>
+</html>

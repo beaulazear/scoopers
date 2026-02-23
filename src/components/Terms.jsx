@@ -485,7 +485,7 @@ export default function Terms() {
             flexWrap: 'wrap',
             marginBottom: '1rem',
           }}>
-            <Link to="/about" style={{ color: 'var(--off-white)', textDecoration: 'none', opacity: 0.8 }}>About</Link>
+            <Link to="/faq" style={{ color: 'var(--off-white)', textDecoration: 'none', opacity: 0.8 }}>FAQ</Link>
             <Link to="/privacy" style={{ color: 'var(--off-white)', textDecoration: 'none', opacity: 0.8 }}>Privacy</Link>
             <Link to="/terms" style={{ color: 'var(--off-white)', textDecoration: 'none', opacity: 0.8 }}>Terms</Link>
           </div>

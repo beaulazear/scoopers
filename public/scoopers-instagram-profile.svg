@@ -1,0 +1,28 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Lowraw';
+        src: url('fonts/Lowraw.ttf') format('truetype'),
+             url('fonts/Lowraw.otf') format('opentype');
+        font-weight: 900;
+        font-style: normal;
+      }
+    </style>
+  </defs>
+
+  <!-- Circular background -->
+  <circle cx="540" cy="540" r="540" fill="#00D084"/>
+
+  <!-- The S -->
+  <text
+    x="540"
+    y="700"
+    font-family="Lowraw, sans-serif"
+    font-size="756"
+    font-weight="900"
+    fill="#1A1A1A"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="-0.02em">S</text>
+</svg>

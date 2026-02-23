@@ -2,19 +2,20 @@
   <!-- Green background -->
   <rect width="1200" height="630" fill="#00D084"/>
 
-  <!-- Subtle circle background for the S -->
-  <circle cx="600" cy="315" r="200" fill="#1A1A1A" opacity="0.08"/>
+  <!-- Circular logo -->
+  <circle cx="600" cy="315" r="250" fill="#1A1A1A"/>
 
   <!-- Large S logo -->
   <text
     x="600"
-    y="315"
+    y="335"
     font-family="Lowraw, Arial, sans-serif"
-    font-size="280"
+    font-size="350"
     font-weight="900"
-    fill="#1A1A1A"
+    fill="#00D084"
     text-anchor="middle"
-    dominant-baseline="central">
+    dominant-baseline="middle"
+    letter-spacing="-0.02em">
     S
   </text>
 </svg>
