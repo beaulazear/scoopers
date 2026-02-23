@@ -96,6 +96,7 @@ export default function LandingPage() {
           className="skip-intro"
           onClick={() => {
             setShowIntro(false)
+            setShowMainContent(true)
             sessionStorage.setItem('hasSeenIntro', 'true')
           }}
           aria-label="Skip intro"
@@ -158,7 +159,7 @@ export default function LandingPage() {
                 </p>
               )}
               <p className="hero-note" style={{ marginTop: error ? '0.5rem' : '1.5rem' }}>
-                Launching Spring 2026 in NYC (all 5 boroughs).
+                Coming Spring 2026 in NYC.
               </p>
             </>
           ) : (

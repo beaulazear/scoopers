@@ -95,15 +95,19 @@ export default function About() {
           </h2>
 
           <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-            I'm a dog walker in Brooklyn. I run Beau's Animal Care and walk 50+ dogs every week. Every day I see piles of dog waste on the same blocks. Nobody cleans them up. I was tired of stepping in everyone else's sh*t.
+            I'm a dog walker in Brooklyn who also loves to code. I run <a href="https://www.beausanimalcare.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--green)', fontWeight: '700', textDecoration: 'none', borderBottom: '2px solid var(--green)' }}>Beau's Animal Care</a> and walk 50+ dogs every week.
           </p>
 
           <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-            So I built Scoopers — a platform where residents sponsor their block for weekly cleanups by dog walkers ($40–$60/month), or post one-off jobs for those messes they see every day ($5–$20). Business sponsors show up on the map. GPS-tracked. Photo-verified. Instant payment.
+            Here's the thing — I found myself constantly picking up random dog sh*t that wasn't even from my dogs. When you're walking around with 4 dogs, people see you and assume it's yours. So I'd just pick it up. I'm already outside, I already have poop bags on me... why not?
+          </p>
+
+          <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+            Eventually I thought, why not make this official? So I built Scoopers — a platform where residents sponsor their block for weekly cleanups by dog walkers ($40–$60/month), or post one-off jobs for those messes everyone sees but nobody picks up ($5–$20). Business sponsors show up on the map. GPS-tracked. Photo-verified. Instant payment.
           </p>
 
           <p style={{ fontSize: '1.1rem', marginBottom: '2rem', lineHeight: '1.6' }}>
-            I'm also a software developer. Built apps for my business and co-founded Voxxy. But Scoopers is different — it's solving a real problem I step in every single day. Launching Spring 2026 in NYC.
+            I'm solving a problem I literally step in every single day. Launching Spring 2026 in NYC.
           </p>
 
           <div style={{
@@ -128,7 +132,7 @@ export default function About() {
             />
             <div>
               <p style={{ fontSize: '1.1rem', marginBottom: '0.75rem', fontWeight: '600' }}>
-                Want to see me in action?
+                Come check out my pack!
               </p>
               <a
                 href="https://instagram.com/beaus.animal.care"
