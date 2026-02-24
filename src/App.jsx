@@ -4,6 +4,9 @@ import Terms from './components/Terms'
 import Privacy from './components/Privacy'
 import FAQ from './components/FAQ'
 import PoopStreats from './components/PoopStreats'
+import ModerationDashboard from './components/ModerationDashboard'
+import ReportsList from './components/ReportsList'
+import ReportDetail from './components/ReportDetail'
 import './App.css'
 
 function App() {
@@ -15,6 +18,11 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/poopstreats" element={<PoopStreats />} />
+
+        {/* Admin Moderation Routes */}
+        <Route path="/admin/moderation" element={<ModerationDashboard />} />
+        <Route path="/admin/reports" element={<ReportsList />} />
+        <Route path="/admin/reports/:id" element={<ReportDetail />} />
       </Routes>
     </BrowserRouter>
   )

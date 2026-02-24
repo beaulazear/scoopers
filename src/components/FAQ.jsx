@@ -10,14 +10,14 @@ export default function FAQ() {
 
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Frequently asked questions about Scoopers NYC - block sponsorships, one-off cleanups, payments, what we clean, and more.')
+      metaDescription.setAttribute('content', 'Frequently asked questions about Scoopers NYC - subscription service, pricing, walkers, what we clean, and more.')
     }
 
     // Cleanup function to restore original meta tags
     return () => {
-      document.title = 'Scoopers NYC - Sponsor Your Block | Dog Walkers Keep NYC Blocks Clean'
+      document.title = 'Scoopers NYC - Dog Walkers Keeping Your Block Clean'
       if (metaDescription) {
-        metaDescription.setAttribute('content', 'Sponsor your NYC block for weekly dog waste cleanup by professional dog walkers. Or post one-off jobs for instant cleanup. GPS & photo verified. Spring 2026 launch.')
+        metaDescription.setAttribute('content', 'Subscribe to your block for daily or weekly dog waste cleanup by professional dog walkers. GPS & photo verified. Spring 2026 launch in NYC.')
       }
     }
   }, [])
@@ -39,64 +39,123 @@ export default function FAQ() {
 
           {/* How It Works */}
           <section className="faq-section">
-            <h2>📍 How This Works</h2>
+            <h2>📍 How It Works</h2>
 
             <div className="faq-item">
-              <h3>How does Scoopers work?</h3>
-              <p>Three ways:</p>
-              <p><strong>1. Sightings (Community Reporting)</strong> - See dog poop on your block? Report it to the public map. No login required. Just snap a photo and drop a pin. Anyone can see it and anyone can convert it to a paid cleanup job. Sightings create social pressure and drive action.</p>
-              <p><strong>2. One-Off Jobs</strong> - Convert a sighting to a paid job or post directly. Set a price ($5-$20). Dog walkers claim it, clean within 60 minutes, submit before/after photos, get paid instantly through Stripe.</p>
-              <p><strong>3. Block Sponsorships (Recurring)</strong> - Hire a dog walker to sweep your block for poop on a schedule. Pay $20-$60/month for biweekly or weekly sweeps. Your block gets a green badge on the map. Neighbors can chip in to lower your cost.</p>
-              <p>Everything is GPS-verified and photo-verified.</p>
+              <h3>What is Scoopers?</h3>
+              <p>Scoopers is a subscription service. You subscribe to your block, a dog walker is assigned to you, and your block stays clean. Like a cleaning service for your home, except it's for your sidewalk.</p>
+              <p><strong>Not a marketplace. Not a job board. Not a community platform.</strong> Just a service you subscribe to.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How does it work?</h3>
+              <p>Simple:</p>
+              <ol>
+                <li><strong>Subscribe</strong> - Choose daily or weekly sweeps for your block</li>
+                <li><strong>Assessment</strong> - A walker sweeps your block on day one to determine how much cleanup is needed</li>
+                <li><strong>Pricing set</strong> - Your monthly price is based on your block's tier (Light, Moderate, Heavy, or Extreme)</li>
+                <li><strong>Ongoing sweeps</strong> - Your assigned walker cleans your block on schedule, every week</li>
+              </ol>
+              <p>You get after photos, pickup counts, and a dashboard showing your block's improvement over time.</p>
             </div>
 
             <div className="faq-item">
               <h3>When does it launch?</h3>
-              <p>Spring 2026 in all 5 NYC boroughs. iOS app first. Join the waitlist at scoopersnyc.com to be first to know.</p>
+              <p>Spring 2026 in Brooklyn and Manhattan. iOS app first. Coming to all of NYC soon. Join the waitlist at scoopersnyc.com to be first to know.</p>
             </div>
 
             <div className="faq-item">
-              <h3>How do I become a scooper?</h3>
-              <p>Join the waitlist at scoopersnyc.com. When we launch, you'll download the app, create a profile, and start claiming jobs. Dog walkers can also claim block sponsorships for recurring monthly income.</p>
+              <h3>How do I become a walker?</h3>
+              <p>We're selectively recruiting professional dog walkers in NYC. If you're a dog walker interested in joining, email us at <a href="mailto:beau@scoopersnyc.com" style={{ color: 'var(--green)', fontWeight: '700' }}>beau@scoopersnyc.com</a> with your neighborhood coverage and client references.</p>
             </div>
           </section>
 
-          {/* Sightings */}
+          {/* Pricing */}
           <section className="faq-section">
-            <h2>👀 Sightings & Community Reporting</h2>
+            <h2>💰 Pricing</h2>
 
             <div className="faq-item">
-              <h3>What are sightings?</h3>
-              <p>Sightings are community reports of dog poop on public sidewalks. Anyone can report them—no login required. Just open the app, snap a photo, select the block, and submit. The sighting appears on the public map for everyone to see.</p>
+              <h3>How much does it cost?</h3>
+              <p>Pricing is based on your block's condition and how often you want it cleaned. We offer two plans:</p>
+              <p><strong>Daily Plan:</strong> Your walker sweeps your block every day.</p>
+              <p><strong>Weekly Plan:</strong> Your walker sweeps your block once per week.</p>
+              <p>Your exact price is determined after an initial assessment sweep of your block. The walker evaluates how much cleanup is needed and your block is assigned a tier (Light, Moderate, Heavy, or Extreme). We'll share pricing details when you subscribe.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Who can see sightings?</h3>
-              <p>Everyone. The map is public. No login required to view. This creates community accountability—dirty blocks are visible to the whole neighborhood.</p>
+              <h3>What are the tiers?</h3>
+              <p>Your block's tier is determined by the assessment sweep (first visit) based on how many piles are found. The four tiers are:</p>
+              <ul>
+                <li><strong>Light:</strong> Minimal cleanup needed (0-3 piles)</li>
+                <li><strong>Moderate:</strong> Average maintenance needed (4-8 piles)</li>
+                <li><strong>Heavy:</strong> Significant cleanup needed (9-15 piles)</li>
+                <li><strong>Extreme:</strong> Extensive cleanup needed (16+ piles)</li>
+              </ul>
+              <p>After the assessment, you'll get a notification with your tier and final monthly price.</p>
             </div>
 
             <div className="faq-item">
-              <h3>How long do sightings last?</h3>
-              <p>Sightings expire after 48 hours. But if others tap "I've Seen This Too," the expiration timer extends. High-confirmation sightings stay visible longer and create more urgency for cleanup.</p>
+              <h3>Does the price change over time?</h3>
+              <p>Yes! If your block improves consistently for 30 days, your tier automatically adjusts down and your price drops. You'll get a notification when your block improves to a lower tier.</p>
+              <p>If conditions worsen (rare with daily maintenance), your tier may adjust up. You can cancel if you disagree.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Can I convert a sighting to a paid job?</h3>
-              <p>Yes! Anyone can tap "Clean This Up" on a sighting to convert it to a paid job. The photo and location are pre-filled. You just set a price and confirm payment. You don't have to be the person who originally reported it.</p>
+              <h3>Can I subscribe to multiple blocks?</h3>
+              <p>Yes! You get a volume discount at 3+ blocks:</p>
+              <ul>
+                <li>3 blocks: 10% off total</li>
+                <li>5 blocks: 15% off total</li>
+                <li>10+ blocks: 20% off total</li>
+              </ul>
+              <p>Perfect for covering your walk to the train or multiple blocks in your neighborhood.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Can I tag businesses in sightings?</h3>
-              <p>Yes. If the poop is in front of a business, you can tag it. The business name appears on the sighting. This creates social pressure for businesses to sponsor their block or take action.</p>
+              <h3>Can I cancel anytime?</h3>
+              <p>Yes. No contracts, no commitments. Cancel in the app and your subscription ends at the end of your current billing period. No refunds for partial months.</p>
+            </div>
+          </section>
+
+          {/* Walkers */}
+          <section className="faq-section">
+            <h2>🐕 Your Walker</h2>
+
+            <div className="faq-item">
+              <h3>Who is my walker?</h3>
+              <p>After you subscribe, we assign a dog walker who covers your neighborhood. You'll see their profile in the app:</p>
+              <ul>
+                <li>First name and photo</li>
+                <li>Business name (if they have one, like "Pocket Walks")</li>
+                <li>Instagram handle (clickable—serves as a trust signal)</li>
+                <li>Rating and number of reviews</li>
+                <li>Total sweeps completed</li>
+              </ul>
+              <p>You don't choose your walker—we assign them based on their coverage area. But you can rate them monthly and cancel if you're not happy.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>What if my walker can't do a sweep?</h3>
+              <p>If your walker is sick, on vacation, or unavailable, we'll either assign a backup walker or notify you that your sweep will be delayed. You'll get a push notification: "Your regular walker is off today. [Backup walker] will cover your block." Or if no backup: "Your walker is off today. Your block will be swept tomorrow."</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can I switch walkers?</h3>
+              <p>Not directly. Walkers are assigned based on their coverage areas. But if you're unhappy with your walker's service, you can cancel your subscription and resubscribe later to see if a different walker is available.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How do I rate my walker?</h3>
+              <p>Once per month, you'll get a push notification: "How's your block looking? Rate [Walker]'s service this month." You rate 4 categories (Quality, Thoroughness, Timeliness, Communication) on a 1-5 star scale, plus leave an optional comment.</p>
             </div>
           </section>
 
           {/* What We Clean */}
           <section className="faq-section">
-            <h2>🚫 What We DON'T Clean (Important!)</h2>
+            <h2>🚫 What We Clean (Important!)</h2>
 
             <div className="faq-item">
-              <h3>What kind of messes do you clean?</h3>
+              <h3>What do you clean?</h3>
               <p><strong>Dog waste only.</strong> Solid poop on public sidewalks. That's it.</p>
               <p>Scoopers is a poop-only platform. We don't clean litter, trash, or any other debris. Just dog poop.</p>
             </div>
@@ -120,80 +179,77 @@ export default function FAQ() {
 
             <div className="faq-item">
               <h3>What if the mess is on private property?</h3>
-              <p>Scoopers only clean public sidewalks and streets. We cannot enter private property (stoops, yards, building entrances) without permission. For private property, contact the property owner.</p>
+              <p>Scoopers only clean public sidewalks and streets. We cannot enter private property (stoops, yards, building entrances) without permission.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>What is a "block"?</h3>
+              <p>A block is the area bounded by two cross streets and two avenues (or equivalent in non-grid neighborhoods). When you subscribe, you select which block you want cleaned. Your walker sweeps the entire sidewalk perimeter of that block.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can I choose just part of a block?</h3>
+              <p>Yes! You can select specific segments: Northwest, Northeast, Southwest, Southeast. If you only care about the side of the block in front of your building, just select that segment. The price is the same—you're just reducing the area your walker needs to cover.</p>
             </div>
           </section>
 
-          {/* Payments */}
+          {/* The Dashboard */}
           <section className="faq-section">
-            <h2>💰 Making Money</h2>
+            <h2>📊 Your Dashboard</h2>
 
             <div className="faq-item">
-              <h3>How much does it cost?</h3>
-              <p><strong>Sightings:</strong> Free to report. Anyone can report dog poop sightings on the public map at no cost.</p>
-              <p><strong>One-Off Jobs:</strong> You set the price. Most jobs are $5-$20 depending on the size of the mess.</p>
-              <p><strong>Block Sponsorships:</strong> $20-$60/month depending on block size and frequency. Biweekly is recommended and cheaper than weekly. Neighbors can contribute $5-$25/month to lower your cost.</p>
+              <h3>What do I see in my dashboard?</h3>
+              <p>Your subscriber dashboard ("My Block" view) shows:</p>
+              <ul>
+                <li><strong>Walker card</strong> - Name, photo, rating, Instagram, next sweep time</li>
+                <li><strong>Streak counter</strong> - Consecutive days your block has been swept</li>
+                <li><strong>Improvement percentage</strong> - How much cleaner your block is vs. week one</li>
+                <li><strong>Monthly trend chart</strong> - 4 weeks of average daily pickup counts</li>
+                <li><strong>Recent sweeps timeline</strong> - Last 7 sweeps with pickup counts and after photos</li>
+              </ul>
             </div>
 
             <div className="faq-item">
-              <h3>How do scoopers get paid?</h3>
-              <p>Scoopers get paid instantly through Stripe after you confirm the job is complete. Payment goes directly to their bank account. Scoopers keep 82% of the job price (18% platform fee).</p>
+              <h3>What are streaks?</h3>
+              <p>Streaks count consecutive days your block has been swept. If a sweep is missed (walker absence with no backup), the streak resets. You'll get milestone notifications at 7, 14, 30, 60, 90, and 365 days.</p>
+              <p>Zero-pickup days count toward the streak—the block was clean, which is a success!</p>
             </div>
 
             <div className="faq-item">
-              <h3>What if nobody claims my job?</h3>
-              <p>Jobs expire after 24 hours. You don't pay unless a scooper completes the work. If nobody claims it, try increasing the price to attract more scoopers.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>Can I get a refund?</h3>
-              <p><strong>One-off jobs:</strong> If the scooper doesn't complete the work or you reject the photos, you don't pay. No refund needed.</p>
-              <p><strong>Block sponsorships:</strong> You can cancel anytime. You're billed monthly, and cancellation takes effect at the end of your current billing period. No refunds for partial months.</p>
+              <h3>Do I see photos of every sweep?</h3>
+              <p>You see after photos. Daily sweeps require one after photo. Assessment sweeps require both before and after photos. Photos are GPS-verified and stored for 90 days.</p>
             </div>
           </section>
 
-          {/* Block Sponsorships */}
+          {/* Privacy & Safety */}
           <section className="faq-section">
-            <h2>🏘️ Block Sponsorships</h2>
+            <h2>🔒 Privacy & Safety</h2>
 
             <div className="faq-item">
-              <h3>What is a block sponsorship?</h3>
-              <p>You hire a dog walker to keep your block clean on a recurring schedule (weekly or biweekly). They sweep the block for dog waste while they're already walking dogs in the area. Your block shows green on the map, and neighbors can see you're sponsoring it.</p>
+              <h3>Do you share my address?</h3>
+              <p>No. Everything operates at the <strong>block level</strong>, never the address level. You select a block on the map, not a specific address. Your assigned walker sees the block boundary, not your home address.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Can neighbors contribute to the sponsorship?</h3>
-              <p>Yes! Neighbors can contribute $5-$25/month to help cover the cost. Their contributions lower your monthly payment. You can choose to show contributor names publicly or keep them anonymous.</p>
+              <h3>Can I see my walker's location in real time?</h3>
+              <p>No. There's no real-time walker tracking. You'll get a push notification when your walker starts and completes a sweep, but you can't track their location during the sweep.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What if my dog walker stops cleaning?</h3>
-              <p>You can rate your dog walker monthly. If they're not performing, you can cancel the sponsorship or switch to a different dog walker. You're never locked in.</p>
+              <h3>What information is visible to walkers?</h3>
+              <p>Walkers see:</p>
+              <ul>
+                <li>Your first name only</li>
+                <li>The block boundary (not your specific address)</li>
+                <li>Your plan (daily or weekly)</li>
+                <li>Your subscription tier</li>
+              </ul>
+              <p>They do NOT see your full name, address, phone number, or payment info.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Can businesses sponsor blocks?</h3>
-              <p>Absolutely! Business sponsors get their business name displayed on the map ("Sponsored by Smith's Coffee Shop"). Great way to show you care about the community and get local visibility.</p>
-            </div>
-          </section>
-
-          {/* Safety & Quality */}
-          <section className="faq-section">
-            <h2>✅ Safety & Quality</h2>
-
-            <div className="faq-item">
-              <h3>Do you background check scoopers?</h3>
-              <p>No. Scoopers are independent contractors, not employees. We are a platform that connects people, not a cleanup service. You choose which scoopers to hire based on their ratings and reviews.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>How do I know the job was actually done?</h3>
-              <p>All jobs require before/after photos and GPS verification. You review the photos before confirming payment. If you're not satisfied, you can reject the job and the scooper doesn't get paid.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>What if I'm not satisfied with the cleanup?</h3>
-              <p>Reject the job. The scooper doesn't get paid, and you don't pay. You can then repost the job with a different scooper or adjust the price.</p>
+              <h3>Do you background check walkers?</h3>
+              <p>Not at launch. At launch, we're manually onboarding a small group of dog walkers we know personally. As we scale, we'll implement background checks for all new walkers.</p>
             </div>
           </section>
 
@@ -208,12 +264,17 @@ export default function FAQ() {
 
             <div className="faq-item">
               <h3>Where does it work?</h3>
-              <p>All 5 NYC boroughs: Manhattan, Brooklyn, Queens, Bronx, Staten Island. Launching everywhere at once in Spring 2026.</p>
+              <p>Launching in Brooklyn and Manhattan in Spring 2026. Queens, Bronx, and Staten Island coming soon.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Do I need to download the app to use it?</h3>
-              <p>Yes. Both posters and scoopers need the iOS app. We're mobile-first because the entire experience is built around GPS, photos, and real-time map updates.</p>
+              <h3>Do I need to download the app?</h3>
+              <p>Yes. Both subscribers and walkers need the iOS app. The entire experience is built around GPS, photos, and real-time updates.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>What about businesses?</h3>
+              <p>Businesses can subscribe to the block in front of their location. Same pricing, same service. Great way to show you care about the community and keep your storefront clean.</p>
             </div>
           </section>
 
