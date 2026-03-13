@@ -127,14 +127,11 @@ export default function LandingPage() {
             SCOOPERS
           </h1>
           <p className="hero-subtitle" role="doc-subtitle">
-            Dog walkers keeping your block clean.
-          </p>
-          <p className="hero-tagline-secondary">
-            Clean blocks. Happy neighbors.
+            Organized walkers. Happy clients. Clean blocks.
           </p>
 
           <p className="hero-tagline">
-            Made with 💩 in Brooklyn
+            Made with 🖤 in Brooklyn
           </p>
 
           {!submitted ? (
@@ -162,7 +159,10 @@ export default function LandingPage() {
                 </p>
               )}
               <p className="hero-note" style={{ marginTop: error ? '0.5rem' : '1.5rem' }}>
-                Coming Spring 2026 in Brooklyn and Manhattan.
+                Join the waitlist to find vetted dog walkers who keep your block clean. Launching Spring 2026.
+              </p>
+              <p className="hero-note" style={{ marginTop: '1rem', fontSize: '1.1rem', fontWeight: '600' }}>
+                Dog walker? <a href="#dog-walkers" style={{ color: '#ffffff', textDecoration: 'underline' }}>Learn about our platform ↓</a>
               </p>
             </>
           ) : (
@@ -171,7 +171,10 @@ export default function LandingPage() {
                 You're on the list! We'll email you when we launch.
               </div>
               <p className="hero-note">
-                Launching Spring 2026 in Brooklyn and Manhattan. Coming to all of NYC soon.
+                We'll notify you in Spring 2026 when you can start booking dog walkers who keep your block clean.
+              </p>
+              <p className="hero-note" style={{ marginTop: '1rem', fontSize: '1.1rem', fontWeight: '600' }}>
+                Dog walker? <a href="#dog-walkers" style={{ color: '#ffffff', textDecoration: 'underline' }}>Learn about our platform ↓</a>
               </p>
             </>
           )}
@@ -181,91 +184,88 @@ export default function LandingPage() {
       {/* The Problem */}
       <section className="problem" aria-labelledby="problem-heading">
         <div className="container">
-          <h2 id="problem-heading" className="problem-title">Every block has that one spot.</h2>
+          <h2 id="problem-heading" className="problem-title">Your block deserves better.</h2>
           <p className="problem-text">
-            Everyone walks around it. Nobody does anything.
-          </p>
-          <p className="problem-text-big">
-            Until now.
+            Hire a local independent dog walker to help keep your block spotless!
           </p>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="how-it-works" aria-labelledby="how-it-works-heading">
+      {/* How It Works - Dog Walker Section */}
+      <section id="dog-walkers" className="how-it-works" aria-labelledby="how-it-works-heading">
         <div className="container">
           <div className="section-divider"></div>
-          <h2 id="how-it-works-heading" className="how-works-title">How it works.</h2>
+          <h2 id="how-it-works-heading" className="how-works-title">Software for independent dog walkers.</h2>
           <p className="how-works-subtitle">
-            Subscribe to your block. A dog walker is assigned. Your block stays clean.
+            Run your business. Keep neighborhoods clean. Make more money.
           </p>
           <div className="how-simple" role="list">
             <div className="simple-step" role="listitem">
-              <p>Subscribe</p>
+              <p>Manage your business</p>
             </div>
             <div className="simple-arrow" aria-hidden="true">→</div>
             <div className="simple-step" role="listitem">
-              <p>Walker assigned</p>
+              <p>Clean blocks (Scoop)</p>
             </div>
             <div className="simple-arrow" aria-hidden="true">→</div>
             <div className="simple-step" role="listitem">
-              <p>Block stays clean</p>
+              <p>Earn more income</p>
             </div>
           </div>
           <p className="how-note">
-            Like a cleaning service for your home, except it's for your sidewalk. No marketplace, no job board, no community reporting. Just a service you subscribe to.
+            Scoopers gives you the tools to manage clients, schedule walks, track invoices, and earn extra money by keeping blocks clean while you walk dogs. Everything in one app.
           </p>
         </div>
       </section>
 
-      {/* Two Plans */}
+      {/* Core Features */}
       <section className="sponsorship" aria-labelledby="plans-heading">
         <div className="container">
           <div className="section-divider"></div>
           <h2 id="plans-heading" className="sponsorship-title">
-            Two plans. Assessment-based pricing.
+            Business tools that work for you.
           </h2>
           <p className="sponsorship-description">
-            Choose daily or weekly sweeps. We'll assess your block's condition on day one, then set your price based on how much cleanup is needed.
+            Manage your dog walking business, track earnings, and keep neighborhoods clean—all from your phone.
           </p>
           <div className="sponsorship-grid">
             <div className="sponsorship-benefit">
-              <h3>Daily Plan</h3>
-              <p>Every day, your walker sweeps your block. Perfect for high-traffic blocks. Your price is set after the initial assessment sweep.</p>
+              <h3>Client & Pet Management</h3>
+              <p>Add clients with contact info. Create pet profiles with behavioral notes, allergies, and addresses. All the details in one place.</p>
             </div>
             <div className="sponsorship-benefit">
-              <h3>Weekly Plan</h3>
-              <p>Once a week, thorough cleanup. Good for lighter blocks. Your price is set after the initial assessment sweep.</p>
+              <h3>Smart Scheduling</h3>
+              <p>Schedule one-time or recurring walks. Set walk types (group, solo, training, sibling). See today's schedule at a glance.</p>
             </div>
             <div className="sponsorship-benefit">
-              <h3>Tier-based pricing</h3>
-              <p>First sweep determines your tier: Light, Moderate, Heavy, or Extreme. Your price adjusts automatically if conditions improve.</p>
+              <h3>Walk Completion & Invoicing</h3>
+              <p>Complete walks with one tap. Automatically generate invoices. Track paid and unpaid invoices per pet or client.</p>
             </div>
             <div className="sponsorship-benefit">
-              <h3>Track everything</h3>
-              <p>See pickup counts, after photos, and your block's improvement over time. Cancel anytime.</p>
+              <h3>Earnings Dashboard</h3>
+              <p>See weekly recurring income, monthly averages, and projected yearly earnings. Know exactly what you're making.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Community */}
+      {/* Scoop Feature */}
       <section className="community" aria-labelledby="community-heading">
         <div className="container">
           <div className="section-divider"></div>
           <div className="community-content">
-            <h2 id="community-heading" className="community-title">Cleaner blocks. Happier neighbors.</h2>
+            <h2 id="community-heading" className="community-title">Scoop: Earn extra while keeping blocks clean.</h2>
             <p className="community-text">
-              Daily sweeps prevent accumulation. Your block improves week after week. Do it long enough and people notice. Kids play outside. Neighbors talk. The block changes.
+              Enable Scoop in your settings to access block cleaning jobs. Get paid to keep your neighborhood spotless while you're already out walking dogs. Help build cleaner communities and increase your income. Coming soon.
             </p>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="final-cta" aria-labelledby="final-cta-heading" aria-label="Join waitlist for NYC dog waste cleanup service">
+      <section className="final-cta" aria-labelledby="final-cta-heading" aria-label="Join waitlist to find professional dog walkers">
         <div className="container">
-          <h2 id="final-cta-heading" className="final-cta-title">Your block won't clean itself.</h2>
+          <h2 id="final-cta-heading" className="final-cta-title">Your block deserves professional dog walkers.</h2>
 
           {!submitted ? (
             <>
@@ -303,7 +303,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p className="footer-tagline">Made with 💩 in Brooklyn</p>
+          <p className="footer-tagline">Made with 🤍 in Brooklyn</p>
           <div className="footer-links">
             <Link to="/faq">FAQ</Link>
             <Link to="/privacy">Privacy</Link>

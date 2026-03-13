@@ -6,18 +6,18 @@ export default function FAQ() {
     window.scrollTo(0, 0)
 
     // Update meta tags
-    document.title = 'FAQ - Scoopers NYC | Frequently Asked Questions'
+    document.title = 'FAQ - Scoopers | Dog Walking Business Platform'
 
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Frequently asked questions about Scoopers NYC - subscription service, pricing, walkers, what we clean, and more.')
+      metaDescription.setAttribute('content', 'Frequently asked questions about Scoopers - the dog walking business management platform for professional dog walkers.')
     }
 
     // Cleanup function to restore original meta tags
     return () => {
-      document.title = 'Scoopers NYC - Dog Walkers Keeping Your Block Clean'
+      document.title = 'Scoopers - Dog Walking Business Platform'
       if (metaDescription) {
-        metaDescription.setAttribute('content', 'Subscribe to your block for daily or weekly dog waste cleanup by professional dog walkers. GPS & photo verified. Spring 2026 launch in NYC.')
+        metaDescription.setAttribute('content', 'Professional dog walking business management app. Manage clients, schedule walks, track earnings, and invoice seamlessly. iOS app launching Spring 2026.')
       }
     }
   }, [])
@@ -37,244 +37,167 @@ export default function FAQ() {
       <main className="legal-content">
         <div className="container">
 
-          {/* How It Works */}
+          {/* About Scoopers */}
           <section className="faq-section">
-            <h2>📍 How It Works</h2>
+            <h2>📱 About Scoopers</h2>
 
             <div className="faq-item">
               <h3>What is Scoopers?</h3>
-              <p>Scoopers is a subscription service. You subscribe to your block, a dog walker is assigned to you, and your block stays clean. Like a cleaning service for your home, except it's for your sidewalk.</p>
-              <p><strong>Not a marketplace. Not a job board. Not a community platform.</strong> Just a service you subscribe to.</p>
+              <p>Scoopers is software for independent dog walkers to manage their business and keep neighborhoods clean.</p>
+              <p><strong>For clients:</strong> Find vetted dog walkers who keep your block clean through our platform.</p>
+              <p><strong>For dog walkers:</strong> Get business management tools to handle clients, schedules, invoices, and earn extra income by cleaning blocks (Scoop feature).</p>
             </div>
 
             <div className="faq-item">
-              <h3>How does it work?</h3>
-              <p>Simple:</p>
-              <ol>
-                <li><strong>Subscribe</strong> - Choose daily or weekly sweeps for your block</li>
-                <li><strong>Assessment</strong> - A walker sweeps your block on day one to determine how much cleanup is needed</li>
-                <li><strong>Pricing set</strong> - Your monthly price is based on your block's tier (Light, Moderate, Heavy, or Extreme)</li>
-                <li><strong>Ongoing sweeps</strong> - Your assigned walker cleans your block on schedule, every week</li>
-              </ol>
-              <p>You get after photos, pickup counts, and a dashboard showing your block's improvement over time.</p>
+              <h3>Who is it for?</h3>
+              <p><strong>Clients & Businesses:</strong> Anyone tired of stepping in dog waste who wants to hire professional dog walkers to keep their block clean.</p>
+              <p><strong>Dog Walkers:</strong> Independent dog walkers who want to stop using spreadsheets, paper calendars, and scattered notes apps. Manage your business and earn extra income keeping neighborhoods spotless.</p>
             </div>
 
             <div className="faq-item">
               <h3>When does it launch?</h3>
-              <p>Spring 2026 in Brooklyn and Manhattan. iOS app first. Coming to all of NYC soon. Join the waitlist at scoopersnyc.com to be first to know.</p>
+              <p>Spring 2026. iOS app first, Android coming later. Join the waitlist at scoopersnyc.com to be notified when we launch.</p>
             </div>
-
-            <div className="faq-item">
-              <h3>How do I become a walker?</h3>
-              <p>We're selectively recruiting professional dog walkers in NYC. If you're a dog walker interested in joining, email us at <a href="mailto:beau@scoopersnyc.com" style={{ color: 'var(--green)', fontWeight: '700' }}>beau@scoopersnyc.com</a> with your neighborhood coverage and client references.</p>
-            </div>
-          </section>
-
-          {/* Pricing */}
-          <section className="faq-section">
-            <h2>💰 Pricing</h2>
 
             <div className="faq-item">
               <h3>How much does it cost?</h3>
-              <p>Pricing is based on your block's condition and how often you want it cleaned. We offer two plans:</p>
-              <p><strong>Daily Plan:</strong> Your walker sweeps your block every day.</p>
-              <p><strong>Weekly Plan:</strong> Your walker sweeps your block once per week.</p>
-              <p>Your exact price is determined after an initial assessment sweep of your block. The walker evaluates how much cleanup is needed and your block is assigned a tier (Light, Moderate, Heavy, or Extreme). We'll share pricing details when you subscribe.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>What are the tiers?</h3>
-              <p>Your block's tier is determined by the assessment sweep (first visit) based on how many piles are found. The four tiers are:</p>
-              <ul>
-                <li><strong>Light:</strong> Minimal cleanup needed (0-3 piles)</li>
-                <li><strong>Moderate:</strong> Average maintenance needed (4-8 piles)</li>
-                <li><strong>Heavy:</strong> Significant cleanup needed (9-15 piles)</li>
-                <li><strong>Extreme:</strong> Extensive cleanup needed (16+ piles)</li>
-              </ul>
-              <p>After the assessment, you'll get a notification with your tier and final monthly price.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>Does the price change over time?</h3>
-              <p>Yes! If your block improves consistently for 30 days, your tier automatically adjusts down and your price drops. You'll get a notification when your block improves to a lower tier.</p>
-              <p>If conditions worsen (rare with daily maintenance), your tier may adjust up. You can cancel if you disagree.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>Can I subscribe to multiple blocks?</h3>
-              <p>Yes! You get a volume discount at 3+ blocks:</p>
-              <ul>
-                <li>3 blocks: 10% off total</li>
-                <li>5 blocks: 15% off total</li>
-                <li>10+ blocks: 20% off total</li>
-              </ul>
-              <p>Perfect for covering your walk to the train or multiple blocks in your neighborhood.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>Can I cancel anytime?</h3>
-              <p>Yes. No contracts, no commitments. Cancel in the app and your subscription ends at the end of your current billing period. No refunds for partial months.</p>
+              <p>Pricing will be announced closer to launch. We're committed to keeping it affordable for independent dog walkers and small businesses.</p>
             </div>
           </section>
 
-          {/* Walkers */}
+          {/* Features */}
           <section className="faq-section">
-            <h2>🐕 Your Walker</h2>
+            <h2>✨ Features</h2>
 
             <div className="faq-item">
-              <h3>Who is my walker?</h3>
-              <p>After you subscribe, we assign a dog walker who covers your neighborhood. You'll see their profile in the app:</p>
-              <ul>
-                <li>First name and photo</li>
-                <li>Business name (if they have one, like "Pocket Walks")</li>
-                <li>Instagram handle (clickable—serves as a trust signal)</li>
-                <li>Rating and number of reviews</li>
-                <li>Total sweeps completed</li>
-              </ul>
-              <p>You don't choose your walker—we assign them based on their coverage area. But you can rate them monthly and cancel if you're not happy.</p>
+              <h3>Client & Pet Management</h3>
+              <p>Add unlimited clients with contact info (email, phone). Create detailed pet profiles with names, birthdays, sex, behavioral notes, allergies, supplies locations, and primary addresses. All the info you need in one place.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What if my walker can't do a sweep?</h3>
-              <p>If your walker is sick, on vacation, or unavailable, we'll either assign a backup walker or notify you that your sweep will be delayed. You'll get a push notification: "Your regular walker is off today. [Backup walker] will cover your block." Or if no backup: "Your walker is off today. Your block will be swept tomorrow."</p>
+              <h3>Schedule Management</h3>
+              <p>Schedule one-time or recurring walks. Set walk types (group, solo, training, sibling walks). Define custom rates for different walk durations (30, 45, 60 minutes) and types. See today's schedule at a glance with chronological sorting.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Can I switch walkers?</h3>
-              <p>Not directly. Walkers are assigned based on their coverage areas. But if you're unhappy with your walker's service, you can cancel your subscription and resubscribe later to see if a different walker is available.</p>
+              <h3>Walk Completion & Invoicing</h3>
+              <p>Complete walks with one tap. Adjust walk duration or add upcharges/discounts if needed. Automatically generate invoices tied to each completed walk. Track paid and unpaid invoices per pet or client.</p>
             </div>
 
             <div className="faq-item">
-              <h3>How do I rate my walker?</h3>
-              <p>Once per month, you'll get a push notification: "How's your block looking? Rate [Walker]'s service this month." You rate 4 categories (Quality, Thoroughness, Timeliness, Communication) on a 1-5 star scale, plus leave an optional comment.</p>
+              <h3>Earnings Dashboard</h3>
+              <p>See your weekly recurring income from all recurring walks. View monthly and weekly averages. See projected yearly earnings based on your actual performance. Filter by year to track growth over time.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Pet Sitting</h3>
+              <p>Schedule multi-day pet sits with daily rates. Track pet sits alongside your regular walks. Generate invoices for completed pet sitting jobs.</p>
             </div>
           </section>
 
-          {/* What We Clean */}
+          {/* Scoop Feature */}
           <section className="faq-section">
-            <h2>🚫 What We Clean (Important!)</h2>
+            <h2>💚 Scoop (Block Cleaning)</h2>
 
             <div className="faq-item">
-              <h3>What do you clean?</h3>
-              <p><strong>Dog waste only.</strong> Solid poop on public sidewalks. That's it.</p>
-              <p>Scoopers is a poop-only platform. We don't clean litter, trash, or any other debris. Just dog poop.</p>
+              <h3>What is Scoop?</h3>
+              <p>Scoop is a feature that lets dog walkers earn extra income by cleaning blocks while they're already out walking dogs. It's how we keep neighborhoods spotless and help walkers increase their earnings.</p>
+              <p><strong>Coming Soon.</strong> The Scoop tab will show a "coming soon" screen until we launch block cleaning features.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What do you NOT clean?</h3>
-              <p><strong>We do NOT clean:</strong></p>
-              <ul>
-                <li><strong>Litter, trash, or debris</strong> - Poop only, not general cleanup</li>
-                <li><strong>Diarrhea or liquid waste</strong> - Cannot be bagged, health hazard</li>
-                <li><strong>Vomit</strong> - Health hazard, requires specialized cleaning</li>
-                <li><strong>Blood or bodily fluids</strong> - Health hazard, biohazard cleanup required</li>
-                <li><strong>Needles or sharps</strong> - Dangerous, requires special disposal</li>
-                <li><strong>Large items</strong> - Furniture, mattresses, appliances (use 311)</li>
-                <li><strong>Hazardous materials</strong> - Chemicals, paint, batteries, etc.</li>
-                <li><strong>Dead animals</strong> - Contact NYC 311 for removal</li>
-                <li><strong>Private property</strong> - Public sidewalks only (curb to building line)</li>
-                <li><strong>Non-dog animal waste</strong> - Dog poop only</li>
-              </ul>
+              <h3>How does Scoop work?</h3>
+              <p>Dog walkers enable Scoop in their Settings, which gives them access to block cleaning jobs in their area. Clients and businesses can hire walkers through the platform to keep specific blocks clean. Walkers earn additional income while helping their community.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What if the mess is on private property?</h3>
-              <p>Scoopers only clean public sidewalks and streets. We cannot enter private property (stoops, yards, building entrances) without permission.</p>
+              <h3>Is Scoop required?</h3>
+              <p>No! Scoop is optional. Dog walkers can use Scoopers just for business management (clients, schedules, invoices) and disable Scoop if they prefer to focus only on dog walking.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What is a "block"?</h3>
-              <p>A block is the area bounded by two cross streets and two avenues (or equivalent in non-grid neighborhoods). When you subscribe, you select which block you want cleaned. Your walker sweeps the entire sidewalk perimeter of that block.</p>
-            </div>
-
-            <div className="faq-item">
-              <h3>Can I choose just part of a block?</h3>
-              <p>Yes! You can select specific segments: Northwest, Northeast, Southwest, Southeast. If you only care about the side of the block in front of your building, just select that segment. The price is the same—you're just reducing the area your walker needs to cover.</p>
+              <h3>When will Scoop launch?</h3>
+              <p>We'll announce the Scoop launch date closer to the iOS app release in Spring 2026. Dog walking business features and Scoop block cleaning features will both be part of the initial launch.</p>
             </div>
           </section>
 
-          {/* The Dashboard */}
+          {/* For Clients & Businesses */}
           <section className="faq-section">
-            <h2>📊 Your Dashboard</h2>
+            <h2>🏢 For Clients & Businesses</h2>
 
             <div className="faq-item">
-              <h3>What do I see in my dashboard?</h3>
-              <p>Your subscriber dashboard ("My Block" view) shows:</p>
-              <ul>
-                <li><strong>Walker card</strong> - Name, photo, rating, Instagram, next sweep time</li>
-                <li><strong>Streak counter</strong> - Consecutive days your block has been swept</li>
-                <li><strong>Improvement percentage</strong> - How much cleaner your block is vs. week one</li>
-                <li><strong>Monthly trend chart</strong> - 4 weeks of average daily pickup counts</li>
-                <li><strong>Recent sweeps timeline</strong> - Last 7 sweeps with pickup counts and after photos</li>
-              </ul>
+              <h3>How do I hire a dog walker to clean my block?</h3>
+              <p>Join the waitlist at scoopersnyc.com. When we launch in Spring 2026, you'll be able to browse vetted dog walkers in your area who offer block cleaning services through Scoop. Book them to keep your block clean on a recurring or one-time basis.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What are streaks?</h3>
-              <p>Streaks count consecutive days your block has been swept. If a sweep is missed (walker absence with no backup), the streak resets. You'll get milestone notifications at 7, 14, 30, 60, 90, and 365 days.</p>
-              <p>Zero-pickup days count toward the streak—the block was clean, which is a success!</p>
+              <h3>How much does block cleaning cost?</h3>
+              <p>Pricing varies by dog walker and block size. Each walker sets their own rates for block cleaning services. You'll see transparent pricing when browsing walkers in your area.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Do I see photos of every sweep?</h3>
-              <p>You see after photos. Daily sweeps require one after photo. Assessment sweeps require both before and after photos. Photos are GPS-verified and stored for 90 days.</p>
+              <h3>Are dog walkers vetted?</h3>
+              <p>Yes. All dog walkers on the Scoopers platform are independent professionals who manage their own businesses. When Scoop launches, we'll provide walker profiles with reviews, experience, and credentials so you can make informed hiring decisions.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can I hire a dog walker for just my block?</h3>
+              <p>Absolutely! Whether you're a building manager, business owner, or resident who wants a cleaner block, you can hire dog walkers through Scoop to clean specific areas on a schedule that works for you.</p>
             </div>
           </section>
 
-          {/* Privacy & Safety */}
+          {/* Using the App - For Dog Walkers */}
           <section className="faq-section">
-            <h2>🔒 Privacy & Safety</h2>
+            <h2>📱 Using the App (For Dog Walkers)</h2>
 
             <div className="faq-item">
-              <h3>Do you share my address?</h3>
-              <p>No. Everything operates at the <strong>block level</strong>, never the address level. You select a block on the map, not a specific address. Your assigned walker sees the block boundary, not your home address.</p>
+              <h3>How do I add a new client?</h3>
+              <p>Go to Clients tab → Tap the + button → Enter their name, email, and phone number. You can add pets to that client right away or later.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Can I see my walker's location in real time?</h3>
-              <p>No. There's no real-time walker tracking. You'll get a push notification when your walker starts and completes a sweep, but you can't track their location during the sweep.</p>
+              <h3>How do I schedule a walk?</h3>
+              <p>Go to Schedule tab → Tap the + button → Select a pet → Choose walk type and duration → Set the time → For recurring walks, select which days of the week.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What information is visible to walkers?</h3>
-              <p>Walkers see:</p>
-              <ul>
-                <li>Your first name only</li>
-                <li>The block boundary (not your specific address)</li>
-                <li>Your plan (daily or weekly)</li>
-                <li>Your subscription tier</li>
-              </ul>
-              <p>They do NOT see your full name, address, phone number, or payment info.</p>
+              <h3>How do I complete a walk?</h3>
+              <p>On your Today screen, tap a walk card → Complete button opens → Confirm the duration (or adjust if needed) → Add upcharge/discount if applicable → Tap Complete. An invoice is automatically generated.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Do you background check walkers?</h3>
-              <p>Not at launch. At launch, we're manually onboarding a small group of dog walkers we know personally. As we scale, we'll implement background checks for all new walkers.</p>
+              <h3>How do I track invoices?</h3>
+              <p>Go to any Pet detail screen → Invoices tab → See unpaid and paid invoices → Tap "Mark Paid" when you receive payment. You can also copy invoice details to clipboard or mark all paid at once.</p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can I see my earnings?</h3>
+              <p>Yes! Go to Profile → See "This Month" stats for walks and earnings → Scroll to "Financial Overview" for weekly recurring income, monthly averages, and projected yearly earnings.</p>
             </div>
           </section>
 
           {/* Technical */}
           <section className="faq-section">
-            <h2>📱 The App</h2>
+            <h2>🔧 Technical</h2>
 
             <div className="faq-item">
-              <h3>Is there an app?</h3>
-              <p>Yes! iOS app launching Spring 2026. Android coming later. Join the waitlist to be notified when it's available.</p>
+              <h3>What platforms does Scoopers support?</h3>
+              <p>iOS first, launching Spring 2026. Android coming later in 2026. We're starting with iOS to ensure quality before expanding.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Where does it work?</h3>
-              <p>Launching in Brooklyn and Manhattan in Spring 2026. Queens, Bronx, and Staten Island coming soon.</p>
+              <h3>Does my data sync across devices?</h3>
+              <p>Yes. Your clients, pets, schedules, and invoices are stored in the cloud and sync automatically. If you get a new phone, just log in and everything is there.</p>
             </div>
 
             <div className="faq-item">
-              <h3>Do I need to download the app?</h3>
-              <p>Yes. Both subscribers and walkers need the iOS app. The entire experience is built around GPS, photos, and real-time updates.</p>
+              <h3>Can I export my data?</h3>
+              <p>Yes. You can export invoice data, client lists, and financial reports. We believe you should own your data.</p>
             </div>
 
             <div className="faq-item">
-              <h3>What about businesses?</h3>
-              <p>Businesses can subscribe to the block in front of their location. Same pricing, same service. Great way to show you care about the community and keep your storefront clean.</p>
+              <h3>Is my data secure?</h3>
+              <p>Yes. All data is encrypted in transit and at rest. We use industry-standard security practices. Your client information is never shared with third parties.</p>
             </div>
           </section>
 
@@ -291,7 +214,7 @@ export default function FAQ() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p className="footer-tagline">Made with 💩 in Brooklyn</p>
+          <p className="footer-tagline">Made with 🤍 in Brooklyn</p>
           <div className="footer-links">
             <Link to="/faq">FAQ</Link>
             <Link to="/privacy">Privacy</Link>
